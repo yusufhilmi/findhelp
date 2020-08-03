@@ -16,14 +16,14 @@
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
 
     {% block css %}
-    
+
 
     <!-- Your stuff: Third-party CSS libraries go here -->
     {% compress css %}
     <!-- This file stores project-specific CSS -->
-    
+
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
+
     {% endcompress %}
     {% endblock %}
 
@@ -80,7 +80,7 @@
       {% endif %}
 
       {% block content %}
-        <p>This project is projected to deploy in 10.07.2020. Until then contact 177yusuf177@gmail.com for details. </p>
+        <p>This project is projected to deploy in 10.08.2020. Until then contact 177yusuf177@gmail.com for details. </p>
       {% endblock content %}
 
     </div> <!-- /container -->
@@ -91,12 +91,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
-      
+
       <!-- Vendor dependencies bundled as one file-->
       {% compress js %}
       <script src="{% static 'js/vendors.js' %}"></script>
       {% endcompress %}
-      
+
 
       <!-- place project specific Javascript in this file -->
       {% compress js %}
@@ -106,4 +106,3 @@
     {% endblock javascript %}
   </body>
 </html>
- 
