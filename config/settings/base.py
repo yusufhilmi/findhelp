@@ -75,6 +75,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "findhelp.users.apps.UsersConfig",
+    "findhelp.helpticket.apps.HelpticketConfig",
+
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
