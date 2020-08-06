@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView
+from itertools import chain
 
 from findhelp.helpticket.models import HelpTicket
-
-from itertools import chain
+from findhelp.helpticket.forms import HelpTicketForm
 
 
 def index(request):
@@ -19,8 +19,11 @@ def index(request):
 #     })
 
 
-# def add_ticket(request):
-#     return render(request, 'helpticket/tickets.html')
+def add_ticket(request):
+    form = HelpTicketForm()
+    return render(request, 'helpticket/create_ticket.html', {
+        'help_form': form
+    })
 
 
 class TicketList(ListView):

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Findhelp Ask for Help{% endblock %}
+{% block content %}
+{% load i18n %}
+{% language 'tr' %}
+<p> This is a create help form</p>
+
+
+
+<form method="post">
+  {% csrf_token %}
+  {{ help_form|crispy }}
+  <button type="submit" class="btn btn-primary">Find Help</button>
+</form>
+{% endlanguage %}
+
+
+{% endblock content %}
