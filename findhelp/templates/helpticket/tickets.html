@@ -1,7 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Findhelp Home{% endblock %}
+{% block content %}
+{% load i18n %}
+{% language 'tr' %}
+<p> This is a main page for helptickets</p>
 
-  {% extends "base.html" %}
-  {% block title %}Findhelp Home{% endblock %}
-  {% block content %}  
-  <p> This is a main page for helptickets</p>
-  {% endblock content %}
-  
+{% if helptickets %}
+
+<p>helpticket available</p>
+{% for ticket in helptickets%}
+<ol>
+  <li>{{ ticket.owner }}</li>
+  <ul>
+    <li>{{ ticket.description }}</li>
+    <li>{{ ticket.category }}</li>
+    <li>{{ ticket.city }}</li>
+    <li>{{ ticket.contact }}</li>
+    <li>{{ ticket.created_at }}</li>
+  </ul>
+</ol>
+{% endfor %}
+
+{% if page_obj%}
+
+<div class="pagination">
+  <span class="step-links">
+      {% if page_obj.has_previous %}
+          <a href="?page=1">&laquo; first</a>
+          <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current">
+          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+      </span>
+
+      {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}">next</a>
+          <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+  </span>
+</div>
+{% endif %}
+
+{% endif %}
+
+
+{% endlanguage %}
+
+
+{% endblock content %}
