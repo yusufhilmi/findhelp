@@ -18,7 +18,7 @@ class HelpTicket(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['-created_at']
+        ordering = ['-updated_at']
 
     def __str__(self):
         return str(self.owner.name) + ' :' + self.category + ' at ' + self.city
