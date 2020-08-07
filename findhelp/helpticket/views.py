@@ -1,38 +1,12 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+# from django.shortcuts import render
+# from django.http import HttpResponse
 from django.views.generic import ListView
-from django.views.generic.edit import CreateView
-from itertools import chain
-from django.urls import reverse
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+# from itertools import chain
+
+
 from findhelp.helpticket.models import HelpTicket
-from findhelp.helpticket.forms import HelpTicketForm
-
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the helpticket index.")
-
-
-# def tickets_view(request):
-#     helptickets = HelpTicket.objects.filter(category="urgent")
-#     # helptickets = "loo"
-#     return render(request, 'helpticket/tickets.html', {
-#         'helptickets': helptickets
-#     })
-
-
-def add_ticket(request):
-    form = HelpTicketForm()
-    return render(request, 'helpticket/create_ticket.html', {
-        'help_form': form
-    })
-
-
-class TicketCreate(CreateView):
-    model = HelpTicket
-    fields = ['owner', 'category', 'city', 'description', 'contact']
-
-
-ticket_create_view = TicketCreate.as_view(success_url="/helpticket/")
+from findhelp.users.models import User
 
 
 class TicketList(ListView):
@@ -40,11 +14,45 @@ class TicketList(ListView):
     template_name = 'helpticket/tickets.html'
     context_object_name = 'helptickets'
 
+    def get_context_data(self, **kwargs):
+        context = super(TicketList, self).get_context_data(**kwargs)
+        context['normalhelptickets'] = HelpTicket.objects.filter(category="normal")
+
+        return context
+
     def get_queryset(self):
         urgents = HelpTicket.objects.filter(category="urgent")
-        normals = HelpTicket.objects.filter(category="normal")
 
-        return list(chain(urgents, normals))
+        return urgents
 
 
 ticket_list_view = TicketList.as_view()
+
+
+class TicketCreate(CreateView):
+    model = HelpTicket
+    fields = ['category', 'city', 'description', 'contact']
+
+    def form_valid(self, form):
+        form.instance.owner = User.objects.get(username=self.request.user)
+        return super(TicketCreate, self).form_valid(form)
+
+
+ticket_create_view = TicketCreate.as_view(success_url="/helpticket/")
+
+
+class TicketUpdate(UpdateView):
+    model = HelpTicket
+    fields = ['category', 'city', 'description', 'contact']
+    success_url = "/helpticket/"
+
+
+ticket_update_view = TicketUpdate.as_view()
+
+
+class TicketDelete(DeleteView):
+    model = HelpTicket
+    success_url = "/helpticket/"
+
+
+ticket_delete_view = TicketDelete.as_view()

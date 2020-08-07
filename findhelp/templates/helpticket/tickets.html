@@ -5,39 +5,67 @@
 {% language 'tr' %}
 <p> This is a main page for helptickets</p>
 
+<div>
+  <h4>Ask for Help</h4>
+  <a href="{% url 'helpticket:create-ticket' %}">
+    <button type="submit" class="btn btn-primary">Find Help</button>
+  </a>
+</div>
 {% if helptickets %}
 
 <p>helpticket available</p>
 {% for ticket in helptickets%}
 <ol>
-  <li>{{ ticket.owner }}</li>
+  <li>{{ ticket.pk }}{{ ticket.owner }} <a href="{% url 'helpticket:update-ticket' ticket.pk %}">Update</a>
+  </li>
   <ul>
     <li>{{ ticket.description }}</li>
     <li>{{ ticket.category }}</li>
     <li>{{ ticket.city }}</li>
     <li>{{ ticket.contact }}</li>
     <li>{{ ticket.created_at }}</li>
+    <li><a href="{% url 'helpticket:delete-ticket' ticket.pk %}">Delete</a></li>
   </ul>
 </ol>
+
 {% endfor %}
+{% if normalhelptickets %}
+
+<p>helpticket available</p>
+{% for ticket in normalhelptickets%}
+<ol>
+  <li>{{ ticket.pk }}{{ ticket.owner }} <a href="{% url 'helpticket:update-ticket' ticket.pk %}">Update</a>
+  </li>
+  <ul>
+    <li>{{ ticket.description }}</li>
+    <li>{{ ticket.category }}</li>
+    <li>{{ ticket.city }}</li>
+    <li>{{ ticket.contact }}</li>
+    <li>{{ ticket.created_at }}</li>
+    <li><a href="{% url 'helpticket:delete-ticket' ticket.pk %}">Delete</a></li>
+  </ul>
+</ol>
+
+{% endfor %}
+{% endif %}
 
 {% if page_obj%}
 
 <div class="pagination">
   <span class="step-links">
-      {% if page_obj.has_previous %}
-          <a href="?page=1">&laquo; first</a>
-          <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-      {% endif %}
+    {% if page_obj.has_previous %}
+    <a href="?page=1">&laquo; first</a>
+    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+    {% endif %}
 
-      <span class="current">
-          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-      </span>
+    <span class="current">
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+    </span>
 
-      {% if page_obj.has_next %}
-          <a href="?page={{ page_obj.next_page_number }}">next</a>
-          <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-      {% endif %}
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">next</a>
+    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+    {% endif %}
   </span>
 </div>
 {% endif %}

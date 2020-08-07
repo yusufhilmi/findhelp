@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Findhelp Ask for Help{% endblock %}
+{% block content %}
+{% load i18n %}
+{% language 'tr' %}
+<p> This is a delete ticket form</p>
+
+
+<form method="post">
+  {% csrf_token %} 
+  <p>Are you sure you want to delete "{{ object.description }}"?</p> 
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form> 
+{% endlanguage %}
+
+{% endblock content %}
