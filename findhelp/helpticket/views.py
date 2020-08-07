@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView
+from django.views.generic.edit import CreateView
 from itertools import chain
-
+from django.urls import reverse
 from findhelp.helpticket.models import HelpTicket
 from findhelp.helpticket.forms import HelpTicketForm
 
@@ -24,6 +25,14 @@ def add_ticket(request):
     return render(request, 'helpticket/create_ticket.html', {
         'help_form': form
     })
+
+
+class TicketCreate(CreateView):
+    model = HelpTicket
+    fields = ['owner', 'category', 'city', 'description', 'contact']
+
+
+ticket_create_view = TicketCreate.as_view(success_url="/helpticket/")
 
 
 class TicketList(ListView):
