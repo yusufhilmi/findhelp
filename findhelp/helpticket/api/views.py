@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets  # , permissions
 
 from findhelp.helpticket.api.serializers import HelpTicketSerializer
 from findhelp.helpticket.api.permissions import IsOwnerOrReadOnly
