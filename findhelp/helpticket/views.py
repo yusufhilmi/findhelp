@@ -13,7 +13,7 @@ from findhelp.users.models import User
 
 
 class TicketList(ListView):
-    paginate_by = 100
+    paginate_by = 50
     template_name = 'helpticket/tickets.html'
     context_object_name = 'helptickets'
 
@@ -51,7 +51,7 @@ ticket_create_view = TicketCreate.as_view(success_url="/helpticket/")
 class TicketUpdate(LoginRequiredMixin, UpdateView):
     model = HelpTicket
     fields = ['category', 'city', 'description', 'contact']
-    success_url = "/helpticket/"
+    success_url = "/"
 
 
 ticket_update_view = TicketUpdate.as_view()
@@ -59,7 +59,30 @@ ticket_update_view = TicketUpdate.as_view()
 
 class TicketDelete(LoginRequiredMixin, DeleteView):
     model = HelpTicket
-    success_url = "/helpticket/"
+    success_url = "/"
 
 
 ticket_delete_view = TicketDelete.as_view()
+
+
+class ProfileTicketList(LoginRequiredMixin, ListView):
+    paginate_by = 20
+    template_name = 'helpticket/profile.html'
+    context_object_name = 'helptickets'
+
+    # def get_context_data(self, **kwargs):
+    #   """"
+    #       Add other things to the context
+    #   """"
+    #     context = super(TicketList, self).get_context_data(**kwargs)
+    #     context['normalhelptickets'] = HelpTicket.objects.filter(category="normal")
+    #     return context
+
+    def get_queryset(self):
+        urgents = HelpTicket.objects.filter(category="urgent", owner=self.request.user)
+        normals = HelpTicket.objects.filter(category="normal", owner=self.request.user)
+
+        return list(chain(urgents, normals))
+
+
+profile_ticket_list_view = ProfileTicketList.as_view()

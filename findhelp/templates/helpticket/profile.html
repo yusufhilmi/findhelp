@@ -5,10 +5,32 @@
 {% load tz %}
 {% language 'tr' %}
 
-<p> This is a main page for helptickets</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h2>{{ request.user.username }}</h2>
+      {% if request.user.name %}
+        <p>{{ request.user.name }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-12">
+      <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
+      <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
+      <!-- Your Stuff: Custom user template urls -->
+    </div>
+  
+  </div>
+
+<p> This is a main page for profile</p>
 
 <div>
-  <h4>Ask for Help</h4>
+  <h4>My Help Tickets</h4>
   <a href="{% url 'helpticket:create-ticket' %}">
     <button type="submit" class="btn btn-primary">Find Help</button>
   </a>
@@ -20,6 +42,7 @@
   {% for ticket in helptickets%}
   <li>
     {{ ticket.pk }}{{ ticket.owner }} 
+    <a href="{% url 'helpticket:update-ticket' ticket.pk %}">Update</a>
   </li>
   <ul>
     <li>{{ ticket.description }}</li>
@@ -28,6 +51,7 @@
     <li>{{ ticket.contact }}</li>
     <li>{{ ticket.created_at|timezone:"Turkey" }}</li>
     <li>Updated: {{ ticket.updated_at|timezone:"Turkey" }}</li>
+    <li><a href="{% url 'helpticket:delete-ticket' ticket.pk %}">Delete</a></li>
   </ul>
   {% endfor %}
 </ol>
