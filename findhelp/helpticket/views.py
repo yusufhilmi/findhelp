@@ -3,6 +3,7 @@
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import PermissionDenied
 
 from itertools import chain
 from datetime import timedelta
@@ -53,10 +54,11 @@ class TicketUpdate(LoginRequiredMixin, UpdateView):
     fields = ['category', 'city', 'description', 'contact']
     success_url = "/"
 
-    def get_queryset(self):
-        queryset = super(TicketUpdate, self).get_queryset()
-        queryset = queryset.filter(owner=self.request.user)
-        return queryset
+    def get_object(self, *args, **kwargs):
+        obj = super(TicketUpdate, self).get_object(*args, **kwargs)
+        if not obj.owner == self.request.user:
+            raise PermissionDenied
+        return obj
 
 
 ticket_update_view = TicketUpdate.as_view()
@@ -66,11 +68,11 @@ class TicketDelete(LoginRequiredMixin, DeleteView):
     model = HelpTicket
     success_url = "/"
 
-    def get_queryset(self):
-        queryset = super(TicketDelete, self).get_queryset()
-        queryset = queryset.filter(owner=self.request.user)
-        print(queryset)
-        return queryset
+    def get_object(self, *args, **kwargs):
+        obj = super(TicketDelete, self).get_object(*args, **kwargs)
+        if not obj.owner == self.request.user:
+            raise PermissionDenied
+        return obj
 
 
 ticket_delete_view = TicketDelete.as_view()
