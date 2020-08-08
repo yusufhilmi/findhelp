@@ -53,6 +53,11 @@ class TicketUpdate(LoginRequiredMixin, UpdateView):
     fields = ['category', 'city', 'description', 'contact']
     success_url = "/"
 
+    def get_queryset(self):
+        queryset = super(TicketUpdate, self).get_queryset()
+        queryset = queryset.filter(owner=self.request.user)
+        return queryset
+
 
 ticket_update_view = TicketUpdate.as_view()
 
@@ -60,6 +65,12 @@ ticket_update_view = TicketUpdate.as_view()
 class TicketDelete(LoginRequiredMixin, DeleteView):
     model = HelpTicket
     success_url = "/"
+
+    def get_queryset(self):
+        queryset = super(TicketDelete, self).get_queryset()
+        queryset = queryset.filter(owner=self.request.user)
+        print(queryset)
+        return queryset
 
 
 ticket_delete_view = TicketDelete.as_view()
@@ -69,14 +80,6 @@ class ProfileTicketList(LoginRequiredMixin, ListView):
     paginate_by = 20
     template_name = 'helpticket/profile.html'
     context_object_name = 'helptickets'
-
-    # def get_context_data(self, **kwargs):
-    #   """"
-    #       Add other things to the context
-    #   """"
-    #     context = super(TicketList, self).get_context_data(**kwargs)
-    #     context['normalhelptickets'] = HelpTicket.objects.filter(category="normal")
-    #     return context
 
     def get_queryset(self):
         urgents = HelpTicket.objects.filter(category="urgent", owner=self.request.user)
