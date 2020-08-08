@@ -41,7 +41,7 @@
 <ol>
   {% for ticket in helptickets%}
   <li>
-    {{ ticket.pk }}{{ ticket.owner }} 
+    {{ ticket.owner.first_name }} {{ ticket.owner.last_name }} 
     <a href="{% url 'helpticket:update-ticket' ticket.pk %}">Update</a>
   </li>
   <ul>

@@ -19,7 +19,7 @@
 <ol>
   {% for ticket in helptickets%}
   <li>
-    {{ ticket.pk }}{{ ticket.owner }} 
+    {{ ticket.owner.first_name }} {{ ticket.owner.last_name }} 
   </li>
   <ul>
     <li>{{ ticket.description }}</li>
