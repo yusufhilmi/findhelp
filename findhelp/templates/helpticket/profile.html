@@ -12,7 +12,7 @@
 
       <h2>{{ request.user.username }}</h2>
       {% if request.user.name %}
-        <p>{{ request.user.name }}</p>
+      <p>{{ request.user.name }}</p>
       {% endif %}
     </div>
   </div>
@@ -24,63 +24,64 @@
       <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
       <!-- Your Stuff: Custom user template urls -->
     </div>
-  
+
   </div>
 
-<p> This is a main page for profile</p>
+  <p> This is a main page for profile</p>
 
-<div>
-  <h4>My Help Tickets</h4>
-  <a href="{% url 'helpticket:create-ticket' %}">
-    <button type="submit" class="btn btn-primary">Find Help</button>
-  </a>
-</div>
-{% if helptickets %}
+  <div>
+    <h4>My Help Tickets</h4>
+    <a href="{% url 'helpticket:create-ticket' %}">
+      <button type="submit" class="btn btn-primary">Find Help</button>
+    </a>
+  </div>
+  {% if helptickets %}
 
-<p>helpticket available</p>
-<ol>
-  {% for ticket in helptickets%}
-  <li>
-    {{ ticket.owner.first_name }} {{ ticket.owner.last_name }} 
-    <a href="{% url 'helpticket:update-ticket' ticket.pk %}">Update</a>
-  </li>
-  <ul>
-    <li>{{ ticket.description }}</li>
-    <li>{{ ticket.category }}</li>
-    <li>{{ ticket.city }}</li>
-    <li>{{ ticket.contact }}</li>
-    <li>{{ ticket.created_at|timezone:"Turkey" }}</li>
-    <li>Updated: {{ ticket.updated_at|timezone:"Turkey" }}</li>
-    <li><a href="{% url 'helpticket:delete-ticket' ticket.pk %}">Delete</a></li>
-  </ul>
-  {% endfor %}
-</ol>
+  <p>helpticket available</p>
+  <div class="helpticket">
+    <ol>
+      {% for ticket in helptickets%}
+      <li>
+        {{ ticket.owner.first_name }} {{ ticket.owner.last_name }}
+        <a href="{% url 'helpticket:update-ticket' ticket.pk %}">Update</a>
+      </li>
+      <ul>
+        <li>{{ ticket.description }}</li>
+        <li>{{ ticket.category }}</li>
+        <li>{{ ticket.city }}</li>
+        <li>{{ ticket.contact }}</li>
+        <li>{{ ticket.created_at|timezone:"Turkey" }}</li>
+        <li>Updated: {{ ticket.updated_at|timezone:"Turkey" }}</li>
+        <li><a href="{% url 'helpticket:delete-ticket' ticket.pk %}">Delete</a></li>
+      </ul>
+      {% endfor %}
+    </ol>
+  </div>
+  {% if page_obj%}
+  <div class="pagination">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+      {% endif %}
 
-{% if page_obj%}
-<div class="pagination">
-  <span class="step-links">
-    {% if page_obj.has_previous %}
-    <a href="?page=1">&laquo; first</a>
-    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-    {% endif %}
+      {% if page_obj.has_next %}
+      <span class="current">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+      </span>
 
-    {% if page_obj.has_next %}
-    <span class="current">
-      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+      <a href="?page={{ page_obj.next_page_number }}">next</a>
+      <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
     </span>
-
-    <a href="?page={{ page_obj.next_page_number }}">next</a>
-    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-    {% endif %}
-  </span>
-</div>
-{% endif %}
+  </div>
+  {% endif %}
 
 
-{% endif %}
+  {% endif %}
 
 
-{% endlanguage %}
+  {% endlanguage %}
 
 
-{% endblock content %}
+  {% endblock content %}
