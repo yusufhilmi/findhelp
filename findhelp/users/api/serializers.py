@@ -12,9 +12,3 @@ class UserSerializer(serializers.ModelSerializer):
             "url": {"view_name": "api:user-detail", "lookup_field": "username"},
             "username": {"read_only": True}
         }
-    
-    # def save(self):
-    #     user = User(
-    #         email=self.validated_data['email'],
-    #         username=self.validated_data['username'],
-    #     )
