@@ -39,14 +39,14 @@ ticket_list_view = TicketList.as_view()
 
 class TicketCreate(LoginRequiredMixin, CreateView):
     model = HelpTicket
-    fields = ['category', 'city', 'descriptizon', 'contact']
+    fields = ['category', 'city', 'description', 'contact']
 
     def form_valid(self, form):
         form.instance.owner = User.objects.get(username=self.request.user)
         return super(TicketCreate, self).form_valid(form)
 
 
-ticket_create_view = TicketCreate.as_view(success_url="/helpticket/")
+ticket_create_view = TicketCreate.as_view(success_url="/")
 
 
 class TicketUpdate(LoginRequiredMixin, UpdateView):

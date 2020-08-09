@@ -1,19 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-.helpticket {
-  background-color: #ecbebe;
-  border: 1px solid #693838;
-  margin: 4.8px;
-  margin: 0.3rem;
-  padding: 3em; }
-  .helpticket ul {
-    font: 100% "Oswald", sans-serif; }
-
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8439,6 +8430,15 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+.helpticket {
+  background-color: #ecbebe;
+  border: 1px solid #693838;
+  margin: 4.8px;
+  margin: 0.3rem;
+  padding: 3em; }
+  .helpticket ul {
+    font: 100% "Oswald", sans-serif; }
 
 .alert-debug {
   background-color: #fff;
