@@ -9,7 +9,9 @@ A platform to help
 .. image:: https://travis-ci.com/yusufhilmi/findhelp.svg?branch=master
      :target: https://travis-ci.com/yusufhilmi/findhelp
      :alt: CI status by Travis CI
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+.. image:: https://img.shields.io/badge/License-MIT-green.svg
+     :target: https://github.com/yusufhilmi/findhelp/blob/master/LICENSE
+     :alt: MIT LICENSE
 
 
 Basic Commands
