@@ -1,108 +1,125 @@
-{% load static i18n compress%}<!DOCTYPE html>
+{% load static i18n compress%}
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}findhelp{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %}findhelp{% endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
+  <script src="https://use.fontawesome.com/17bdfffc24.js"></script>
+  <link rel="icon" href="{% static 'images/logo.png' %}">
 
-    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
-
-    {% block css %}
+  {% block css %}
 
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
-    {% compress css %}
-    <!-- This file stores project-specific CSS -->
+  <!-- Your stuff: Third-party CSS libraries go here -->
+  {% compress css %}
+  <!-- This file stores project-specific CSS -->
 
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+  <link href="{% static 'css/project.css' %}" rel="stylesheet">
 
-    {% endcompress %}
-    {% endblock %}
+  {% endcompress %}
+  {% endblock %}
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="mb-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'helpticket:home' %}">findhelp</a>
+  <div class="mb-1">
+    <nav class="navbar navbar-expand-md navbar-light navbar-custom">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="{% url 'helpticket:home' %}">
+        <img class="" src="{% static 'images/logo.png' %}" width="30" height="30" class="d-inline-block align-top"
+          alt="" loading="lazy">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'helpticket:home' %}">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'helpticket:profile'  %}">My Helptickets</a>
+              <a class="dropdown-item" href="#">Update My Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a>
+            </div>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            {# URL provided by django-allauth/account/urls.py #}
+            <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+          </li>
+          <li class="nav-item">
+            {# URL provided by django-allauth/account/urls.py #}
+            <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <a href="{% url 'helpticket:create-ticket' %}">
+        <button type="submit" class="btn btn-outline-findhelp my-2 my-sm-0">Find Help</button>
+      </a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'helpticket:home' %}">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'helpticket:profile'  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
+    </nav>
 
-    </div>
+  </div>
 
-    <div class="container">
+  <div class="container">
 
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-          {% endfor %}
-      {% endif %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button"
+        class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+    {% endfor %}
+    {% endif %}
 
-      {% block content %}
-        <p>This project is projected to deploy in 10.08.2020. Until then contact yusufhilmicr@gmail.com for more details. </p>
-      {% endblock content %}
+    {% block content %}
+    <p>This project is projected to deploy in 10.08.2020. Until then contact yusufhilmicr@gmail.com for more details.
+    </p>
+    {% endblock content %}
 
-    </div> <!-- /container -->
+  </div> <!-- /container -->
 
-    {% block modal %}{% endblock modal %}
+  {% block modal %}{% endblock modal %}
 
-    <!-- Le javascript
+  <!-- Le javascript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
+  <!-- Placed at the end of the document so the pages load faster -->
+  {% block javascript %}
 
-      <!-- Vendor dependencies bundled as one file-->
-      {% compress js %}
-      <script src="{% static 'js/vendors.js' %}"></script>
-      {% endcompress %}
+  <!-- Vendor dependencies bundled as one file-->
+  {% compress js %}
+  <script src="{% static 'js/vendors.js' %}"></script>
+  {% endcompress %}
 
 
-      <!-- place project specific Javascript in this file -->
-      {% compress js %}
-      <script src="{% static 'js/project.js' %}"></script>
-      {% endcompress %}
+  <!-- place project specific Javascript in this file -->
+  {% compress js %}
+  <script src="{% static 'js/project.js' %}"></script>
+  {% endcompress %}
 
-    {% endblock javascript %}
-  </body>
+  {% endblock javascript %}
+</body>
+
 </html>

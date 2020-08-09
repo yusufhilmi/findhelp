@@ -38,3 +38,45 @@ $red: #b94a48;
   border-color: $dark-pink;
   color: $red;
 }
+
+// PROJECT SCSS CODE
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap');
+
+$bg_general: #ecbebe;
+$border: #693838;
+$font-stack: 'Oswald', sans-serif;
+$font-brand:  'Changa', sans-serif;
+
+
+$logo-color: #448893;
+$logo-color-light: #eef4f5;
+$logo-color-old: #6cd9ca;
+
+// @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Oswald&display=swap');
+// body {
+//     font-family: $font-body;
+// }
+
+.helpticket {
+    ul{
+        font: 100% $font-stack;
+    }
+    background-color: $bg_general;
+    border: 1px solid $border;
+    margin: 0.3rem;
+    padding: 3em;
+}
+
+.navbar-custom {
+  font-family: $font-brand;
+  font-weight: 500;
+
+  background-color: $logo-color-light;
+}
+
+.btn-outline-findhelp {
+  @include button-outline-variant($logo-color-old, #222222, lighten($logo-color-old,5%), $logo-color-old);
+}

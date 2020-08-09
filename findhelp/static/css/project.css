@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8431,15 +8432,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-.helpticket {
-  background-color: #ecbebe;
-  border: 1px solid #693838;
-  margin: 4.8px;
-  margin: 0.3rem;
-  padding: 3em; }
-  .helpticket ul {
-    font: 100% "Oswald", sans-serif; }
-
 .alert-debug {
   background-color: #fff;
   border-color: #d6e9c6;
@@ -8449,3 +8441,40 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #b94a48; }
+
+.helpticket {
+  background-color: #ecbebe;
+  border: 1px solid #693838;
+  margin: 4.8px;
+  margin: 0.3rem;
+  padding: 3em; }
+  .helpticket ul {
+    font: 100% "Oswald", sans-serif; }
+
+.navbar-custom {
+  font-family: "Changa", sans-serif;
+  font-weight: 500;
+  background-color: #eef4f5; }
+
+.btn-outline-findhelp {
+  color: #6cd9ca;
+  border-color: #6cd9ca; }
+  .btn-outline-findhelp:hover {
+    color: #222222;
+    background-color: #80ded1;
+    border-color: #6cd9ca; }
+  .btn-outline-findhelp:focus, .btn-outline-findhelp.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 217, 202, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(108, 217, 202, 0.5); }
+  .btn-outline-findhelp.disabled, .btn-outline-findhelp:disabled {
+    color: #6cd9ca;
+    background-color: transparent; }
+  .btn-outline-findhelp:not(:disabled):not(.disabled):active, .btn-outline-findhelp:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-findhelp.dropdown-toggle {
+    color: #212529;
+    background-color: #80ded1;
+    border-color: #6cd9ca; }
+    .btn-outline-findhelp:not(:disabled):not(.disabled):active:focus, .btn-outline-findhelp:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-findhelp.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 217, 202, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(108, 217, 202, 0.5); }
