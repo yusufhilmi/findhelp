@@ -27,7 +27,6 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
         return reverse("users:detail", kwargs={"username": self.request.user.username})
 
     def get_object(self):
-        print(User.objects.get(username=self.request.user.username))
         return User.objects.get(username=self.request.user.username)
 
     def form_valid(self, form):

@@ -4,6 +4,8 @@ from findhelp.helpticket.models import HelpTicket
 
 
 class HelpTicketSerializer(serializers.ModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+
     class Meta:
         model = HelpTicket
         fields = ['owner', 'category', 'city', 'description', 'contact']

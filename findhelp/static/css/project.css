@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 .helpticket {
-  background-color: #ecbebe; }
+  background-color: #ecbebe;
+  border: 1px solid #693838;
+  margin: 4.8px;
+  margin: 0.3rem;
+  padding: 3em; }
+  .helpticket ul {
+    font: 100% "Oswald", sans-serif; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

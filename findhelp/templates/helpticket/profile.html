@@ -38,9 +38,9 @@
   {% if helptickets %}
 
   <p>helpticket available</p>
-  <div class="helpticket">
-    <ol>
-      {% for ticket in helptickets%}
+  <ol>
+    {% for ticket in helptickets%}
+    <div class="helpticket">
       <li>
         {{ ticket.owner.first_name }} {{ ticket.owner.last_name }}
         <a href="{% url 'helpticket:update-ticket' ticket.pk %}">Update</a>
@@ -54,9 +54,9 @@
         <li>Updated: {{ ticket.updated_at|timezone:"Turkey" }}</li>
         <li><a href="{% url 'helpticket:delete-ticket' ticket.pk %}">Delete</a></li>
       </ul>
+    </div>
       {% endfor %}
-    </ol>
-  </div>
+  </ol>
   {% if page_obj%}
   <div class="pagination">
     <span class="step-links">
