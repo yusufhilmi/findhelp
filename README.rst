@@ -3,24 +3,14 @@ findhelp
 
 A platform to help
 
-.. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
-     :target: https://github.com/pydanny/cookiecutter-django/
-     :alt: Built with Cookiecutter Django
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
      :alt: Black code style
 .. image:: https://travis-ci.com/yusufhilmi/findhelp.svg?branch=master
-     :target: https://travis-ci.com/yusufhilmi/findhelp.svg?branch=master
+     :target: https://travis-ci.com/yusufhilmi/findhelp
+     :alt: CI status by Travis CI
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-:License: MIT
-
-
-Settings
---------
-
-Moved to settings_.
-
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
 Basic Commands
 --------------
@@ -61,14 +51,6 @@ Running tests with py.test
 
   $ pytest
 
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
 
 Celery
 ^^^^^^
@@ -85,8 +67,6 @@ To run a celery worker:
 Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.
 
 
-
-
 Email Server
 ^^^^^^^^^^^^
 
@@ -98,32 +78,6 @@ Please check `cookiecutter-django Docker documentation`_ for more details how to
 With MailHog running, to view messages that are sent by your application, open your browser and go to ``http://127.0.0.1:8025``
 
 .. _mailhog: https://github.com/mailhog/MailHog
-
-
-
-Sentry
-^^^^^^
-
-Sentry is an error logging aggregator service. You can sign up for a free account at  https://sentry.io/signup/?code=cookiecutter  or download and host it yourself.
-The system is setup with reasonable defaults, including 404 logging and integration with the WSGI application.
-
-You must set the DSN url in production.
-
-
-Deployment
-----------
-
-The following details how to deploy this application.
-
-
-
-Docker
-^^^^^^
-
-See detailed `cookiecutter-django Docker documentation`_.
-
-.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
-
 
 
 Custom Bootstrap Compilation
