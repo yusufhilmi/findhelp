@@ -31,6 +31,7 @@ urlpatterns += [
     path("api/", include("config.api_router")),
     # DRF auth token
     path("auth-token/", obtain_auth_token),
+    path('api/register/', include('rest_auth.registration.urls')),
 ]
 
 if settings.DEBUG:

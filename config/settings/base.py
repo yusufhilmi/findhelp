@@ -71,6 +71,7 @@ THIRD_PARTY_APPS = [
     "django_celery_beat",
     "rest_framework",
     "rest_framework.authtoken",
+    'rest_auth.registration',
 ]
 
 LOCAL_APPS = [
