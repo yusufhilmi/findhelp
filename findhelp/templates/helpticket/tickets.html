@@ -5,53 +5,49 @@
 {% load tz %}
 {% language 'tr' %}
 
-<p> This is a main page for helptickets</p>
 
-<div>
-  <h4>Ask for Help</h4>
-  <a href="{% url 'helpticket:create-ticket' %}">
-    <button type="submit" class="btn btn-primary">Find Help</button>
-  </a>
-</div>
 {% if helptickets %}
-
-<p>helpticket available</p>
-<ol>
   {% for ticket in helptickets%}
-  <li>
-    {{ ticket.owner.first_name }} {{ ticket.owner.last_name }} 
-  </li>
-  <ul>
-    <li>{{ ticket.description }}</li>
-    <li>{{ ticket.category }}</li>
-    <li>{{ ticket.city }}</li>
-    <li>{{ ticket.contact }}</li>
-    <li>{{ ticket.created_at|timezone:"Turkey" }}</li>
-    <li>Updated: {{ ticket.updated_at|timezone:"Turkey" }}</li>
-  </ul>
+    {% if ticket.category == "urgent" %}
+    <div class="card border-danger mb-3">
+      {% else %}
+      <div class="card border-warning mb-3">
+    {% endif %}
+    <div class="card-header">{{ ticket.owner.first_name }} {{ ticket.owner.last_name }} | {{ ticket.city }}
+      <small class="text-muted float-right">Last updated {{ ticket.updated_at|timezone:"Turkey" }}</small>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{ ticket.description }}</p>
+      <p class="card-text">{{ ticket.contact }}</p>
+      <p class="card-text"><small class="text-muted">Created {{ ticket.created_at|timezone:"Turkey" }}</small></p>
+    </div>
+  </div>
   {% endfor %}
-</ol>
 
-{% if page_obj%}
-<div class="pagination">
-  <span class="step-links">
-    {% if page_obj.has_previous %}
-    <a href="?page=1">&laquo; first</a>
-    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-    {% endif %}
 
-    {% if page_obj.has_next %}
-    <span class="current">
-      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+
+  {% if page_obj%}
+  <div class="pagination">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+      {% endif %}
+
+      {% if page_obj.has_next %}
+      <span class="current">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+      </span>
+
+      <a href="?page={{ page_obj.next_page_number }}">next</a>
+      <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
     </span>
+  </div>
+  {% endif %}
 
-    <a href="?page={{ page_obj.next_page_number }}">next</a>
-    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-    {% endif %}
-  </span>
-</div>
-{% endif %}
-
+{% else %}
+  <h4> There aren't resolved helptickets in last 90 days</h4>
 
 {% endif %}
 
