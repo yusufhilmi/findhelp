@@ -12,9 +12,11 @@ from django.utils import timezone
 from findhelp.helpticket.models import HelpTicket
 from findhelp.users.models import User
 
+PAGINATION = 8
+
 
 class TicketList(ListView):
-    paginate_by = 50
+    paginate_by = PAGINATION
     template_name = 'helpticket/tickets.html'
     context_object_name = 'helptickets'
 
@@ -79,7 +81,7 @@ ticket_delete_view = TicketDelete.as_view()
 
 
 class ProfileTicketList(LoginRequiredMixin, ListView):
-    paginate_by = 20
+    paginate_by = PAGINATION
     template_name = 'helpticket/profile.html'
     context_object_name = 'helptickets'
 

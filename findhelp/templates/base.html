@@ -34,7 +34,7 @@
 <body>
 
   <div class="mb-1">
-    <nav class="navbar navbar-expand-md navbar-light navbar-custom">
+    <nav class="navbar navbar-expand-md navbar-light navbar-custom border-bottom">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -59,8 +59,8 @@
               Profile
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'helpticket:profile'  %}">My Helptickets</a>
-              <a class="dropdown-item" href="#">Update My Profile</a>
+              <a class="dropdown-item" href="{% url 'helpticket:profile'  %}">Helptickets</a>
+              <a class="dropdown-item" href="{% url 'users:update'  %}">Update Profile</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a>
             </div>
@@ -76,10 +76,10 @@
           </li>
           {% endif %}
         </ul>
+        <a href="{% url 'helpticket:create-ticket' %}">
+          <button type="submit" class="btn btn-outline-primary findhelp my-2 my-sm-0">Find Help</button>
+        </a>
       </div>
-      <a href="{% url 'helpticket:create-ticket' %}">
-        <button type="submit" class="btn btn-outline-findhelp my-2 my-sm-0">Find Help</button>
-      </a>
 
     </nav>
 

@@ -1,6 +1,6 @@
 
-@import "bootstrap";
 @import "custom_bootstrap_vars";
+@import "bootstrap";
 
 
 
@@ -45,11 +45,15 @@ $red: #b94a48;
 
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700;800;900&display=swap');
+
+
+
 $bg_general: #ecbebe;
 $border: #693838;
 $font-stack: 'Oswald', sans-serif;
 $font-brand:  'Changa', sans-serif;
-
+$font-general: 'Nunito', sans-serif;
 
 $logo-color: #448893;
 $logo-color-light: #eef4f5;
@@ -60,23 +64,25 @@ $logo-color-old: #6cd9ca;
 //     font-family: $font-body;
 // }
 
-.helpticket {
-    ul{
-        font: 100% $font-stack;
-    }
-    background-color: $bg_general;
-    border: 1px solid $border;
-    margin: 0.3rem;
-    padding: 3em;
+body {
+  font-family: $font-general;
 }
 
 .navbar-custom {
-  font-family: $font-brand;
-  font-weight: 500;
-
-  background-color: $logo-color-light;
+  font-weight: 400;
 }
 
-.btn-outline-findhelp {
-  @include button-outline-variant($logo-color-old, #222222, lighten($logo-color-old,5%), $logo-color-old);
+
+.findhelp{
+  font-weight: 600;
 }
+
+
+.container{
+  font-weight: 300;
+}
+
+
+// .btn-outline-findhelp {
+//   @include button-outline-variant($logo-color-old, #222222, lighten($logo-color-old,5%), $logo-color-old);
+// }

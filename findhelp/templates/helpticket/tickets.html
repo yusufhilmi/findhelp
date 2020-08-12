@@ -7,7 +7,7 @@
 
 
 {% if helptickets %}
-  {% for ticket in helptickets%}
+{% for ticket in helptickets%}
     {% if ticket.category == "urgent" %}
     <div class="card border-danger mb-3">
       {% else %}
@@ -27,23 +27,32 @@
 
 
   {% if page_obj%}
-  <div class="pagination">
-    <span class="step-links">
+  
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
       {% if page_obj.has_previous %}
-      <a href="?page=1">&laquo; first</a>
-      <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+      <!-- <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ page_obj.previous_page_number }}">previous</a> -->
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a></li>
       {% endif %}
 
+      <li class="page-item active"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
       {% if page_obj.has_next %}
-      <span class="current">
-        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-      </span>
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></li>
 
-      <a href="?page={{ page_obj.next_page_number }}">next</a>
-      <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
       {% endif %}
-    </span>
-  </div>
+    </ul>
+  </nav>
   {% endif %}
 
 {% else %}
