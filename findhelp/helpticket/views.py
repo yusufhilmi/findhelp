@@ -43,6 +43,14 @@ class TicketListCategorized(ListView):
     template_name = 'helpticket/tickets.html'
     context_object_name = 'helptickets'
 
+    def get_context_data(self, **kwargs):
+        """
+            Add other things to the context
+        """
+        context = super(TicketListCategorized, self).get_context_data(**kwargs)
+        context['categories'] = HelpCategory.objects.all()
+        return context
+
     def get_queryset(self):
         time_threshold = timezone.now() - timedelta(days=30)
         helptickets = HelpTicket.objects.filter(categories=self.kwargs["pk"], updated_at__gt=time_threshold)
