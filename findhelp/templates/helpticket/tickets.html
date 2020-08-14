@@ -6,6 +6,12 @@
 {% language 'tr' %}
 
 
+{% if categories %}
+{% for category in categories%}
+<li>{{category}}</li>
+{% endfor %}
+{% endif %}
+
 {% if helptickets %}
 {% for ticket in helptickets%}
     <div class="card border-danger mb-3">
