@@ -13,9 +13,9 @@ class HelpCategory(models.Model):
 class HelpTicket(models.Model):
     categories = models.ManyToManyField(HelpCategory, related_name="ticket_category")
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="ticket_owner")
-    city = models.CharField(max_length=100, default="Istanbul")
+    city = models.CharField(max_length=100)
     description = models.TextField(blank=False)
-    contact = models.CharField(max_length=150, blank=False, default="İletişim Bilgileri: ")
+    contact = models.CharField(max_length=150,)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
