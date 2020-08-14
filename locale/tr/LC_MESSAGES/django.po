@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-14 16:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: findhelp/helpticket/apps.py:7
+msgid "Tickets"
+msgstr "Yardım Biletleri"
+
+#: findhelp/templates/account/account_inactive.html:5
+#: findhelp/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "Hesap Aktif Değil"
+
+#: findhelp/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "Bu hesap aktif değil"
+
+#: findhelp/templates/account/email.html:7
+msgid "Account"
+msgstr "Hesap"
+
+#: findhelp/templates/account/email.html:10
+msgid "E-mail Addresses"
+msgstr "E-mail Adresleri"
+
+#: findhelp/templates/account/email.html:13
+msgid "The following e-mail addresses are associated with your account:"
+msgstr "Hesabınızla bağlantılı mail adresleri:"
+
+#: findhelp/templates/account/email.html:27
+msgid "Verified"
+msgstr "Onaylandı"
+
+#: findhelp/templates/account/email.html:29
+msgid "Unverified"
+msgstr "Onaylanmadı"
+
+#: findhelp/templates/account/email.html:31
+msgid "Primary"
+msgstr "Birincil"
+
+#: findhelp/templates/account/email.html:37
+msgid "Make Primary"
+msgstr "Birincil Yap"
+
+#: findhelp/templates/account/email.html:38
+msgid "Re-send Verification"
+msgstr "Tekrar Gönder"
+
+#: findhelp/templates/account/email.html:39
+msgid "Remove"
+msgstr "Kaldır"
+
+#: findhelp/templates/account/email.html:46
+msgid "Warning:"
+msgstr "Uyarı:"
+
+#: findhelp/templates/account/email.html:46
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+"Hesabınızla bağlanıtılı e-mail adresi bulunmamaktadır. Şifrenizi yenilemek, "
+"bildirimleri almak için bir e-mail adresi ekleyiniz."
+
+#: findhelp/templates/account/email.html:51
+msgid "Add E-mail Address"
+msgstr "E-mail adresi ekle"
+
+#: findhelp/templates/account/email.html:56
+msgid "Add E-mail"
+msgstr "E-mail Ekle"
+
+#: findhelp/templates/account/email.html:66
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr "Seçtiğiniz e-mail adresini kaldırmak istediğinize emin misiniz?"
+
+#: findhelp/templates/account/email_confirm.html:6
+#: findhelp/templates/account/email_confirm.html:10
+msgid "Confirm E-mail Address"
+msgstr "E-mail adresini onayla"
+
+#: findhelp/templates/account/email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+"Lütfen bu <a href=\"mailto:%(email)s\">%(email)s</a> mail adresinin bu "
+"%(user_display)s kullanıcıya ait olduğunu onaylayın."
+
+#: findhelp/templates/account/email_confirm.html:20
+msgid "Confirm"
+msgstr "Onayla"
+
+#: findhelp/templates/account/email_confirm.html:27
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"Bu link geçersizdir. Lütfen <a href=\"%(email_url)s\">yeni bir istek "
+"oluşturun</a>."
+
+#: findhelp/templates/account/login.html:7
+#: findhelp/templates/account/login.html:11
+#: findhelp/templates/account/login.html:44 findhelp/templates/base.html:75
+msgid "Sign In"
+msgstr "Giriş Yap"
+
+#: findhelp/templates/account/login.html:16
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
+"up</a>\n"
+"for a %(site_name)s account and sign in below:"
+msgstr ""
+
+#: findhelp/templates/account/login.html:26
+msgid "or"
+msgstr "veya"
+
+#: findhelp/templates/account/login.html:33
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"<a href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+"Eğer hesap oluşturmadıysanız, lütfen \n"
+"<a href=\"%(signup_url)s\">hesap oluşturun</a>."
+
+#: findhelp/templates/account/login.html:43
+msgid "Forgot Password?"
+msgstr "Şifrenizi mi unuttunuz?"
+
+#: findhelp/templates/account/logout.html:5
+#: findhelp/templates/account/logout.html:8
+#: findhelp/templates/account/logout.html:17
+msgid "Sign Out"
+msgstr "Çıkış Yap"
+
+#: findhelp/templates/account/logout.html:10
+msgid "Are you sure you want to sign out?"
+msgstr "Çıkış yapmak istediğinize emin misiniz?"
+
+#: findhelp/templates/account/password_change.html:6
+#: findhelp/templates/account/password_change.html:9
+#: findhelp/templates/account/password_change.html:14
+#: findhelp/templates/account/password_reset_from_key.html:5
+#: findhelp/templates/account/password_reset_from_key.html:8
+#: findhelp/templates/account/password_reset_from_key_done.html:4
+#: findhelp/templates/account/password_reset_from_key_done.html:7
+msgid "Change Password"
+msgstr "Şifre Değiştir"
+
+#: findhelp/templates/account/password_reset.html:7
+#: findhelp/templates/account/password_reset.html:11
+#: findhelp/templates/account/password_reset_done.html:6
+#: findhelp/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr "Şifremi Sıfırla"
+
+#: findhelp/templates/account/password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"Şifrenizi mi unuttunuz? E-mail adresinizi girin ve sizeşifrenizi yenilemeniz "
+"için yapmanı gerekenleri gösterelim."
+
+#: findhelp/templates/account/password_reset.html:21
+msgid "Reset My Password"
+msgstr "Şifremi Sıfırla"
+
+#: findhelp/templates/account/password_reset.html:24
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Şifrenizi yenilerken sorun yaşıyorsanız bizimle iletişime geçin."
+
+#: findhelp/templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Size bir e-mail gönderdik. Eğer birkaç dakika içinde ulaşmazsa lütfen "
+"bizimle iletişime geçin."
+
+#: findhelp/templates/account/password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr "Yanlış Bilgi"
+
+#: findhelp/templates/account/password_reset_from_key.html:12
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"Şifre yenileme linkiniz geçersiz. Muhtemelen daha önce bu linki "
+"kullanmanızdan kaynaklanıyor.  Yeni link için: <a href=\"%(passwd_reset_url)s"
+"\">şifremi yenile</a>."
+
+#: findhelp/templates/account/password_reset_from_key.html:18
+msgid "change password"
+msgstr "şifre değiştir"
+
+#: findhelp/templates/account/password_reset_from_key.html:21
+#: findhelp/templates/account/password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr "Şifreniz değiştirildi"
+
+#: findhelp/templates/account/password_set.html:6
+#: findhelp/templates/account/password_set.html:9
+#: findhelp/templates/account/password_set.html:14
+msgid "Set Password"
+msgstr "Şifreizi giriniz"
+
+#: findhelp/templates/account/signup.html:6
+msgid "Signup"
+msgstr "Kayıt Ol"
+
+#: findhelp/templates/account/signup.html:9
+#: findhelp/templates/account/signup.html:19 findhelp/templates/base.html:71
+msgid "Sign Up"
+msgstr "Kayıt Ol"
+
+#: findhelp/templates/account/signup.html:11
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+"Hesabınız var mı? Varsa lütfen <a href=\"%(login_url)s\">giriş yapın</a>."
+
+#: findhelp/templates/account/signup_closed.html:5
+#: findhelp/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr "Kayıtlar kapalı"
+
+#: findhelp/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "Üzgünüz, kayıt sistemimiz kapalıdır."
+
+#: findhelp/templates/account/verification_sent.html:5
+#: findhelp/templates/account/verification_sent.html:8
+#: findhelp/templates/account/verified_email_required.html:5
+#: findhelp/templates/account/verified_email_required.html:8
+msgid "Verify Your E-mail Address"
+msgstr "E-mail adresini onayla"
+
+#: findhelp/templates/account/verification_sent.html:10
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Onay için sana bir e-mail attık. Maildeki linki takip et ve kaydını tamamla. "
+"Mail size birkaç dakika içerisinde ulaşmazsa  lütfen bizimle iletişime geçin."
+
+#: findhelp/templates/account/verified_email_required.html:12
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+"Sitemizin bu kısmı e-mail adresinizin onaylanmış olmasını\n"
+"gerektiriyor.Bu sebepten, e-mail adresinizi \n"
+"onaylamanız gerekiyor. "
+
+#: findhelp/templates/account/verified_email_required.html:16
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+"Size onay için bir e-mail gönderdik\n"
+"Lütfen e-mail içerisindeki linke tıklayınız.\n"
+"Herhangi bir problem ile karşılaşırsanız bize ulaşın."
+
+#: findhelp/templates/account/verified_email_required.html:20
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+"<strong>Not:</strong> hala <a href=\"%(email_url)s\">e-mail "
+"adresinizideğiştirebilirsiniz</a>."
+
+#: findhelp/templates/users/user_form.html:14
+msgid "Update"
+msgstr "Güncelle"
+
+#: findhelp/users/apps.py:7
+msgid "Users"
+msgstr "Kullanıcılar"
+
+#: findhelp/users/forms.py:16
+msgid "This username has already been taken."
+msgstr "Bu kullanıcı adı alınmıştır."
+
+#: findhelp/users/models.py:11
+msgid "Name of User"
+msgstr "Kullanıcı İsmi"
+
+#: findhelp/users/views.py:34
+msgid "Infos successfully updated"
+msgstr "Bilgileriniz başarıyla güncellendi"

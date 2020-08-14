@@ -1,4 +1,4 @@
-from django.shortcuts import reverse
+# from django.shortcuts import reverse
 # from django.http import HttpResponse
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
