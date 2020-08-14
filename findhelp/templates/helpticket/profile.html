@@ -5,61 +5,57 @@
 {% load tz %}
 {% language 'tr' %}
 
-  <div class="row">
-    <div class="col-sm-12 mb-5 mt-5">
-      <h2>{{ request.user.first_name }} {{ request.user.last_name }}</h2>
-      <p>
-        Helptickets below!
-      </p>
-    </div>
+<div class="row">
+  <div class="col-sm-12 mb-5 mt-5">
+    <h2>{{ request.user.first_name }} {{ request.user.last_name }}</h2>
+    <p>
+      Helptickets below!
+    </p>
   </div>
-  {% if helptickets %}
-  {% for ticket in helptickets%}
-  {% if ticket.category == "urgent" %}
-  <div class="card border-danger mb-3">
-    {% else %}
-    <div class="card border-warning mb-3">
-      {% endif %}
-      <div class="card-header">{{ ticket.owner.first_name }} {{ ticket.owner.last_name }} | {{ ticket.city }}
-        <small class="text-muted float-right">Last updated {{ ticket.updated_at|timezone:"Turkey" }}</small>
-      </div>
-      <div class="card-body">
-        <p class="card-text">{{ ticket.description }}</p>
-        <p class="card-text">{{ ticket.contact }}</p>
-        <p class="card-text"><small class="text-muted">Created {{ ticket.created_at|timezone:"Turkey" }}</small></p>
-      </div>
-      <div class="card-footer">
-        <a href="{% url 'helpticket:delete-ticket' ticket.pk %}">
-          <button type="button" class="btn btn-outline-danger">Delete</button>
-        </a>
-        <a href="{% url 'helpticket:update-ticket' ticket.pk %}">
-          <button type="button" class="btn btn-outline-info float-right">Update</button>
-        </a>
-      </div>
-    </div>
-    {% endfor %}
+</div>
+{% if helptickets %}
+{% for ticket in helptickets%}
+<div class="card border-danger mb-3">
+  <div class="card-header">{{ ticket.owner.first_name }} {{ ticket.owner.last_name }} | {{ ticket.city }}
+    <small class="text-muted float-right">Last updated {{ ticket.updated_at|timezone:"Turkey" }}</small>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ ticket.description }}</p>
+    <p class="card-text">{{ ticket.contact }}</p>
+    <p class="card-text"><small class="text-muted">Created {{ ticket.created_at|timezone:"Turkey" }}</small></p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'helpticket:delete-ticket' ticket.pk %}">
+      <button type="button" class="btn btn-outline-danger">Delete</button>
+    </a>
+    <a href="{% url 'helpticket:update-ticket' ticket.pk %}">
+      <button type="button" class="btn btn-outline-info float-right">Update</button>
+    </a>
+  </div>
+</div>
+{% endfor %}
 
 
-    {% if page_obj%}
-    <div class="pagination">
-      <span class="step-links">
-        {% if page_obj.has_previous %}
-        <a href="?page=1">&laquo; first</a>
-        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-        {% endif %}
-
-        {% if page_obj.has_next %}
-        <span class="current">
-          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-        </span>
-
-        <a href="?page={{ page_obj.next_page_number }}">next</a>
-        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-      </span>
-    </div>
-    {% endif %}
+{% if page_obj%}
+<div class="pagination">
+  <span class="step-links">
+    {% if page_obj.has_previous %}
+    <a href="?page=1">&laquo; first</a>
+    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
     {% endif %}
 
-    {% endlanguage %}
-    {% endblock content %}
+    {% if page_obj.has_next %}
+    <span class="current">
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+    </span>
+
+    <a href="?page={{ page_obj.next_page_number }}">next</a>
+    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+    {% endif %}
+  </span>
+</div>
+{% endif %}
+{% endif %}
+
+{% endlanguage %}
+{% endblock content %}

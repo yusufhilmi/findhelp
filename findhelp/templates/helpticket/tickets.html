@@ -8,11 +8,7 @@
 
 {% if helptickets %}
 {% for ticket in helptickets%}
-    {% if ticket.category == "urgent" %}
     <div class="card border-danger mb-3">
-      {% else %}
-      <div class="card border-warning mb-3">
-    {% endif %}
     <div class="card-header">{{ ticket.owner.first_name }} {{ ticket.owner.last_name }} | {{ ticket.city }}
       <small class="text-muted float-right">Last updated {{ ticket.updated_at|timezone:"Turkey" }}</small>
     </div>

@@ -30,10 +30,9 @@ class TicketList(ListView):
 
     def get_queryset(self):
         time_threshold = timezone.now() - timedelta(days=30)
-        urgents = HelpTicket.objects.filter(category="urgent", updated_at__gt=time_threshold)
-        normals = HelpTicket.objects.filter(category="normal", updated_at__gt=time_threshold)
+        helptickets = HelpTicket.objects.filter(updated_at__gt=time_threshold)
 
-        return list(chain(urgents, normals))
+        return helptickets
 
 
 ticket_list_view = TicketList.as_view()
@@ -41,7 +40,7 @@ ticket_list_view = TicketList.as_view()
 
 class TicketCreate(LoginRequiredMixin, CreateView):
     model = HelpTicket
-    fields = ['category', 'city', 'description', 'contact']
+    fields = ['categories', 'city', 'description', 'contact']
 
     def form_valid(self, form):
         form.instance.owner = User.objects.get(username=self.request.user)
@@ -53,7 +52,7 @@ ticket_create_view = TicketCreate.as_view(success_url="/")
 
 class TicketUpdate(LoginRequiredMixin, UpdateView):
     model = HelpTicket
-    fields = ['category', 'city', 'description', 'contact']
+    fields = ['categories', 'city', 'description', 'contact']
     success_url = "/"
 
     def get_object(self, *args, **kwargs):
@@ -86,10 +85,9 @@ class ProfileTicketList(LoginRequiredMixin, ListView):
     context_object_name = 'helptickets'
 
     def get_queryset(self):
-        urgents = HelpTicket.objects.filter(category="urgent", owner=self.request.user)
-        normals = HelpTicket.objects.filter(category="normal", owner=self.request.user)
+        helptickets = HelpTicket.objects.filter(owner=self.request.user)
 
-        return list(chain(urgents, normals))
+        return helptickets
 
 
 profile_ticket_list_view = ProfileTicketList.as_view()
