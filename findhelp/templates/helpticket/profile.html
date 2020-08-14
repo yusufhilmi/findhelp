@@ -21,7 +21,11 @@
   </div>
   <div class="card-body">
     <p class="card-text">{{ ticket.description }}</p>
-    <p class="card-text">{{ ticket.contact }}</p>
+    <blockquote class="blockquote mb-0">
+      <footer class="blockquote-footer">İletişim Bilgileri:
+        {{ ticket.contact }}
+      </footer>
+    </blockquote>
     <p class="card-text"><small class="text-muted">Created {{ ticket.created_at|timezone:"Turkey" }}</small></p>
   </div>
   <div class="card-footer">

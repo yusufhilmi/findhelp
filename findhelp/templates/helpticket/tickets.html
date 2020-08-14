@@ -51,8 +51,8 @@
     <small class="text-muted float-right">Last updated {{ ticket.updated_at|timezone:"Turkey" }}</small>
   </div>
   <div class="card-body">
+    <p class="card-text">{{ ticket.description }}</p>
     <blockquote class="blockquote mb-0">
-      <p class="card-text">{{ ticket.description }}</p>
       <footer class="blockquote-footer">İletişim Bilgileri:
         {{ ticket.contact }}
       </footer>

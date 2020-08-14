@@ -8,7 +8,7 @@ class HelpTicketSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = HelpTicket
-        fields = ['owner', 'category', 'city', 'description', 'contact']
+        fields = ['owner', 'city', 'description', 'contact']
 
         # extra_kwargs = {
         #     "url": {"view_name": "api:user-detail", "lookup_field": "username"}
