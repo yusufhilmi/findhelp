@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load i18n %}
 {% block title %}User: {{ object.username }}{% endblock %}
 
 {% block content %}
@@ -21,9 +21,9 @@
 <div class="row">
 
   <div class="col-sm-12">
-    <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
-    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
-    <a class="btn btn-primary" href="{% url 'helpticket:profile' %}" role="button">My Helptickets</a>
+    <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">{% trans 'Update' %}</a>
+    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">{% trans 'E-Mail %}</a>
+    <a class="btn btn-primary" href="{% url 'helpticket:profile' %}" role="button">{% trans 'My Helptickets' %}</a>
     <!-- Your Stuff: Custom user template urls -->
   </div>
 

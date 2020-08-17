@@ -5,14 +5,11 @@
 {% block content %}
 {% load i18n %}
 {% language 'tr' %}
-<p> This is a create help form</p>
-
-
 
 <form method="post">
   {% csrf_token %}
   {{ help_form|crispy }}
-  <button type="submit" class="btn btn-primary">Find Help</button>
+  <button type="submit" class="btn btn-primary">{% trans 'Find Help' %}</button>
 </form>
 {% endlanguage %}
 
