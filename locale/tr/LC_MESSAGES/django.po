@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-14 16:00+0000\n"
+"POT-Creation-Date: 2020-08-19 12:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,18 @@ msgstr ""
 #: findhelp/helpticket/apps.py:7
 msgid "Tickets"
 msgstr "Yardım Biletleri"
+
+#: findhelp/templates/403.html:6
+msgid "Forbidden (403)"
+msgstr "Yasak Bölge (403)"
+
+#: findhelp/templates/404.html:6
+msgid "Page Not Found"
+msgstr "Aradığınız Sayfa Bulunamadı"
+
+#: findhelp/templates/500.html:6
+msgid "Internal Error"
+msgstr "Server Hatası"
 
 #: findhelp/templates/account/account_inactive.html:5
 #: findhelp/templates/account/account_inactive.html:8
@@ -152,7 +164,7 @@ msgstr "Şifrenizi mi unuttunuz?"
 
 #: findhelp/templates/account/logout.html:5
 #: findhelp/templates/account/logout.html:8
-#: findhelp/templates/account/logout.html:17
+#: findhelp/templates/account/logout.html:17 findhelp/templates/base.html:65
 msgid "Sign Out"
 msgstr "Çıkış Yap"
 
@@ -301,9 +313,85 @@ msgstr ""
 "<strong>Not:</strong> hala <a href=\"%(email_url)s\">e-mail "
 "adresinizideğiştirebilirsiniz</a>."
 
+#: findhelp/templates/base.html:50
+msgid "Home"
+msgstr "Anasayfa"
+
+#: findhelp/templates/base.html:53
+msgid "About"
+msgstr "Hakkımızda"
+
+#: findhelp/templates/base.html:59
+msgid "Profile"
+msgstr "Hesabım"
+
+#: findhelp/templates/base.html:62
+#| msgid "Tickets"
+msgid "Helptickets"
+msgstr "Yardım Biletleri"
+
+#: findhelp/templates/base.html:63
+#| msgid "Update"
+msgid "Update Profile"
+msgstr "Güncelle"
+
+#: findhelp/templates/base.html:80
+#: findhelp/templates/helpticket/create_ticket.html:12
+#: findhelp/templates/helpticket/helpticket_form.html:12
+msgid "Find Help"
+msgstr "Yardım Bul"
+
+#: findhelp/templates/helpticket/helpticket_confirm_delete.html:11
+#| msgid "Are you sure you want to sign out?"
+msgid "Are you sure you want to delete this ticket"
+msgstr "Çıkış yapmak istediğinize emin misiniz?"
+
+#: findhelp/templates/helpticket/helpticket_confirm_delete.html:12
+#: findhelp/templates/helpticket/profile.html:33
+msgid "Delete"
+msgstr "Sil"
+
+#: findhelp/templates/helpticket/profile.html:12
+msgid "Helptickets Below!"
+msgstr "Yardım Biletleriniz"
+
+#: findhelp/templates/helpticket/profile.html:20
+#: findhelp/templates/helpticket/tickets.html:51
+#| msgid "Update"
+msgid "Last Updated"
+msgstr "Son Güncelleme:"
+
+#: findhelp/templates/helpticket/profile.html:25
+#: findhelp/templates/helpticket/tickets.html:56
+msgid "Contact Information:"
+msgstr "İletişim Bilgileri:"
+
+#: findhelp/templates/helpticket/profile.html:29
+#: findhelp/templates/helpticket/tickets.html:62
+msgid "Created at"
+msgstr "Oluşturma: "
+
+#: findhelp/templates/helpticket/profile.html:36
+#: findhelp/templates/users/user_detail.html:24
 #: findhelp/templates/users/user_form.html:14
 msgid "Update"
 msgstr "Güncelle"
+
+#: findhelp/templates/helpticket/tickets.html:25
+msgid "Latest Helptickets"
+msgstr "En son yardım biletleri"
+
+#: findhelp/templates/helpticket/tickets.html:33
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: findhelp/templates/helpticket/tickets.html:102
+msgid "There aren't unresolved tickets in last 90 days."
+msgstr "Son 90 gün içerisinde çözülememiş bir yardım bileti mevcut değildir."
+
+#: findhelp/templates/users/user_detail.html:26
+msgid "My Helptickets"
+msgstr "Yardım Biletlerim"
 
 #: findhelp/users/apps.py:7
 msgid "Users"
