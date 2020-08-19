@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-19 12:18+0000\n"
+"POT-Creation-Date: 2020-08-19 12:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,23 @@ msgstr ""
 #: findhelp/helpticket/apps.py:7
 msgid "Tickets"
 msgstr "Yardım Biletleri"
+
+#: findhelp/helpticket/models.py:15
+#: findhelp/templates/helpticket/tickets.html:33
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: findhelp/helpticket/models.py:17
+msgid "City"
+msgstr "Şehir"
+
+#: findhelp/helpticket/models.py:18
+msgid "Description"
+msgstr "Lütfen durumunuzu anlatınız"
+
+#: findhelp/helpticket/models.py:19
+msgid "Contact"
+msgstr "İletişim Bilgileriniz"
 
 #: findhelp/templates/403.html:6
 msgid "Forbidden (403)"
@@ -326,12 +343,10 @@ msgid "Profile"
 msgstr "Hesabım"
 
 #: findhelp/templates/base.html:62
-#| msgid "Tickets"
 msgid "Helptickets"
 msgstr "Yardım Biletleri"
 
 #: findhelp/templates/base.html:63
-#| msgid "Update"
 msgid "Update Profile"
 msgstr "Güncelle"
 
@@ -342,7 +357,6 @@ msgid "Find Help"
 msgstr "Yardım Bul"
 
 #: findhelp/templates/helpticket/helpticket_confirm_delete.html:11
-#| msgid "Are you sure you want to sign out?"
 msgid "Are you sure you want to delete this ticket"
 msgstr "Çıkış yapmak istediğinize emin misiniz?"
 
@@ -357,7 +371,6 @@ msgstr "Yardım Biletleriniz"
 
 #: findhelp/templates/helpticket/profile.html:20
 #: findhelp/templates/helpticket/tickets.html:51
-#| msgid "Update"
 msgid "Last Updated"
 msgstr "Son Güncelleme:"
 
@@ -381,13 +394,13 @@ msgstr "Güncelle"
 msgid "Latest Helptickets"
 msgstr "En son yardım biletleri"
 
-#: findhelp/templates/helpticket/tickets.html:33
-msgid "Categories"
-msgstr "Kategoriler"
-
 #: findhelp/templates/helpticket/tickets.html:102
 msgid "There aren't unresolved tickets in last 90 days."
 msgstr "Son 90 gün içerisinde çözülememiş bir yardım bileti mevcut değildir."
+
+#: findhelp/templates/users/user_detail.html:25
+msgid "E-Mail"
+msgstr "E-Mail"
 
 #: findhelp/templates/users/user_detail.html:26
 msgid "My Helptickets"
