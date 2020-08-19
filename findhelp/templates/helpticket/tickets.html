@@ -4,20 +4,6 @@
 {% load i18n %}
 {% load tz %}
 
-<!-- 
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-    aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div> -->
-
 <div class="row m-2 mb-4 mt-4">
   <div class="col-6">
     <h4>
@@ -51,11 +37,13 @@
   </div>
   <div class="card-body">
     <p class="card-text">{{ ticket.description }}</p>
-    <blockquote class="blockquote mb-0">
-      <footer class="blockquote-footer">{% trans 'Contact Information:' %}
-        {{ ticket.contact }}
-      </footer>
-    </blockquote>
+
+    <div class="card m-2 mt-4">
+      <div class="card-body">
+        <strong>{% trans 'Contact Information:' %}</strong>
+        <em>{{ ticket.contact }}</em>
+      </div>
+    </div>
   </div>
   <div class="card-footer">
     <p class="card-text"><small class="text-muted">{% trans 'Created at' %}
