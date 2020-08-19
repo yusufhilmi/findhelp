@@ -15,7 +15,7 @@
 </div>
 {% if helptickets %}
 {% for ticket in helptickets%}
-<div class="card mb-4 card-2">
+<div class="card border-primary mb-4 card-2">
   <div class="card-header">{{ ticket.owner.first_name }} {{ ticket.owner.last_name }} | {{ ticket.city }}
     <small class="text-muted float-right">{% trans 'Last Updated' %} {{ ticket.updated_at|timezone:"Turkey" }}</small>
   </div>
