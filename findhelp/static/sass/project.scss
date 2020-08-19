@@ -41,28 +41,21 @@ $red: #b94a48;
 
 // PROJECT SCSS CODE
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap');
+
+// $font-stack: 'Oswald', sans-serif;
+// $font-brand:  'Changa', sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700;800;900&display=swap');
 
-
-
-$bg_general: #ecbebe;
-$border: #693838;
-$font-stack: 'Oswald', sans-serif;
-$font-brand:  'Changa', sans-serif;
 $font-general: 'Nunito', sans-serif;
 
 $logo-color: #448893;
 $logo-color-light: #eef4f5;
 $logo-color-old: #6cd9ca;
 
-// @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Oswald&display=swap');
-// body {
-//     font-family: $font-body;
-// }
 
 body {
   font-family: $font-general;
