@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-19 12:34+0000\n"
+"POT-Creation-Date: 2020-08-28 16:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "Tickets"
 msgstr "Yardım Biletleri"
 
 #: findhelp/helpticket/models.py:15
-#: findhelp/templates/helpticket/tickets.html:33
+#: findhelp/templates/helpticket/tickets.html:18
 msgid "Categories"
 msgstr "Kategoriler"
 
@@ -361,42 +361,87 @@ msgid "Are you sure you want to delete this ticket"
 msgstr "Çıkış yapmak istediğinize emin misiniz?"
 
 #: findhelp/templates/helpticket/helpticket_confirm_delete.html:12
-#: findhelp/templates/helpticket/profile.html:33
+#: findhelp/templates/helpticket/profile.html:32
 msgid "Delete"
 msgstr "Sil"
 
-#: findhelp/templates/helpticket/profile.html:12
+#: findhelp/templates/helpticket/profile.html:11
 msgid "Helptickets Below!"
 msgstr "Yardım Biletleriniz"
 
-#: findhelp/templates/helpticket/profile.html:20
-#: findhelp/templates/helpticket/tickets.html:51
+#: findhelp/templates/helpticket/profile.html:19
+#: findhelp/templates/helpticket/tickets.html:36
 msgid "Last Updated"
 msgstr "Son Güncelleme:"
 
-#: findhelp/templates/helpticket/profile.html:25
-#: findhelp/templates/helpticket/tickets.html:56
+#: findhelp/templates/helpticket/profile.html:24
+#: findhelp/templates/helpticket/tickets.html:43
 msgid "Contact Information:"
 msgstr "İletişim Bilgileri:"
 
-#: findhelp/templates/helpticket/profile.html:29
-#: findhelp/templates/helpticket/tickets.html:62
+#: findhelp/templates/helpticket/profile.html:28
+#: findhelp/templates/helpticket/tickets.html:49
 msgid "Created at"
 msgstr "Oluşturma: "
 
-#: findhelp/templates/helpticket/profile.html:36
+#: findhelp/templates/helpticket/profile.html:35
 #: findhelp/templates/users/user_detail.html:24
 #: findhelp/templates/users/user_form.html:14
 msgid "Update"
 msgstr "Güncelle"
 
-#: findhelp/templates/helpticket/tickets.html:25
+#: findhelp/templates/helpticket/tickets.html:10
 msgid "Latest Helptickets"
 msgstr "En son yardım biletleri"
 
-#: findhelp/templates/helpticket/tickets.html:102
+#: findhelp/templates/helpticket/tickets.html:89
 msgid "There aren't unresolved tickets in last 90 days."
 msgstr "Son 90 gün içerisinde çözülememiş bir yardım bileti mevcut değildir."
+
+#: findhelp/templates/pages/about.html:7
+msgid "What is Findhelp?"
+msgstr "Findhelp Nedir?"
+
+#: findhelp/templates/pages/about.html:10
+msgid "Findhelp is a platform where people can find help."
+msgstr "Findhelp insanların yardım bulabileceği bir platformdur."
+
+#: findhelp/templates/pages/about.html:14
+msgid "Our Story"
+msgstr "Hikayemiz"
+
+#: findhelp/templates/pages/about.html:18
+msgid ""
+"\n"
+"                There is an increasing number of problems in our society. "
+"Almost all forms of violence still exists and\n"
+"                number of occasion is increasing day by day. People can't "
+"find food or shelter; they lose their job\n"
+"                without\n"
+"                getting their payments. These are only a few of the "
+"problems. To respond and fix these problems we use\n"
+"                social media channels and it is a useful medium to help. "
+"However, only a small percentage of posts are\n"
+"                getting traction and the rest of problems that are shared "
+"are being lost in hundreds of thousands posts.\n"
+"                There is also the fact that a help request in social media "
+"is useful only if the people or organizations\n"
+"                that can help can see them. So, we created this platform to "
+"reach help requests of people to the\n"
+"                organizations that can help.\n"
+"                "
+msgstr ""
+"\n"
+"Toplumumuzda günden güne artan sayıda şiddet vakaları ve diğer problemler baş göstermektedir.  "
+"Neredeyse bütün şiddet formları hala mevcut ve bunların sayısı günden güne artmakta.\n"
+"Bunun yanında insanlar açlık, evsizlik ve çok daha farklı türden problemler ile baş etmeye çalışıyor.\n"
+"Bizler ise bu problemlere dikkat çekmek ve onları çözmek amacı ile sosyal medya kanallarından paylaşımlar yaparak bu problemlerin varlığının duyurulmasına katkıda bulunmaya çalışıyoruz."
+"Her ne kadar çok sayıda paylaşıma denk gelsek de buz dağının sadece görünen kısmındaki sorunları görmüş oluyoruz.\n"
+" Yeteri kadar dikkat çekememiş ama gerçekten yardıma ihtiyacı olan insanların sayısı göz ardı edilemeyecek derecede fazla. "
+" Bunun yanında çok daha önemli bir faktör var. Bu da istenilen yardımın yardım edebilecek kişiye veya kuruma ulaşmasıdır.\n"
+" Ne yazık ki sosyal medyada binlerce kez paylaşılmamış bir problem o kişi ve kurumlara ulaşamıyor."
+" Bu yüzden, yardım isteğinde bulunan kişileri onlara yardım edebilecek kişi ve kurumlara ulaştırmak amacıyla bu platformu inşa ettik. "
+
 
 #: findhelp/templates/users/user_detail.html:25
 msgid "E-Mail"
