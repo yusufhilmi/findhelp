@@ -27,5 +27,7 @@ if compress_enabled; then
   python /app/manage.py compress
 fi
 
+python /app/manage.py compilemessages
+
 /usr/local/bin/gunicorn config.asgi --bind 0.0.0.0:5000 --chdir=/app -k uvicorn.workers.UvicornWorker
 
