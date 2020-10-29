@@ -78,13 +78,13 @@
         </ul>
 
         
-        <span class="mr-5">
+        <a class="mr-5">
           <form action="{% url 'set_language' %}" method="post" id="languageform">
             {% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}">
           </form>
 
-          <select name="language" onchange="this.form.submit()" form="languageform">
+          <select name="language" onchange="this.form.submit()" form="languageform" class="form-control form-control-sm">
             {% get_current_language as LANGUAGE_CODE %}
             {% get_available_languages as LANGUAGES %}
             {% get_language_info_list for LANGUAGES as languages %}
@@ -94,7 +94,7 @@
             </option>
             {% endfor %}
           </select>
-        </span>
+        </a>
         
 
       
