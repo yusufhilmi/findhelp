@@ -47,19 +47,24 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'helpticket:home' %}">{% trans 'Home' %}<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'landing-home' %}">{% trans 'Home' %}<span
+                class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">{% trans 'About' %}</a>
           </li>
           {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'helpticket:home' %}">{% trans 'Helptickets' %}<span
+                class="sr-only">(current)</span></a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               {% trans 'Profile' %}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'helpticket:profile'  %}">{% trans 'Helptickets' %}</a>
+              <a class="dropdown-item" href="{% url 'helpticket:profile'  %}">{% trans 'Edit Helptickets' %}</a>
               <a class="dropdown-item" href="{% url 'users:update'  %}">{% trans 'Update Profile' %}</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'Sign Out' %}</a>
@@ -77,27 +82,28 @@
           {% endif %}
         </ul>
 
-        
+
         <a class="mr-5">
           <form action="{% url 'set_language' %}" method="post" id="languageform">
             {% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}">
           </form>
 
-          <select name="language" onchange="this.form.submit()" form="languageform" class="form-control form-control-sm">
+          <select name="language" onchange="this.form.submit()" form="languageform"
+            class="form-control form-control-sm">
             {% get_current_language as LANGUAGE_CODE %}
             {% get_available_languages as LANGUAGES %}
             {% get_language_info_list for LANGUAGES as languages %}
             {% for language in languages %}
-            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+            <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
               {{ language.name_local }}
             </option>
             {% endfor %}
           </select>
         </a>
-        
 
-      
+
+
         <a href="{% url 'helpticket:create-ticket' %}">
           <button type="submit" class="btn btn-outline-primary findhelp my-2 my-sm-0">{% trans 'Find Help' %}</button>
         </a>
