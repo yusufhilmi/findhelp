@@ -15,7 +15,7 @@ from findhelp.users.models import User
 PAGINATION = 8
 
 
-class TicketList(ListView):
+class TicketList(LoginRequiredMixin, ListView):
     paginate_by = PAGINATION
     template_name = 'helpticket/tickets.html'
     context_object_name = 'helptickets'
@@ -38,7 +38,7 @@ class TicketList(ListView):
 ticket_list_view = TicketList.as_view()
 
 
-class TicketListCategorized(ListView):
+class TicketListCategorized(LoginRequiredMixin, ListView):
     paginate_by = PAGINATION
     template_name = 'helpticket/tickets.html'
     context_object_name = 'helptickets'
