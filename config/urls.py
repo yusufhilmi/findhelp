@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
-    path("home/", TemplateView.as_view(template_name="pages/home.html"), name="old_home"),
+    path("", TemplateView.as_view(template_name="pages/home.html"), name="old_home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
@@ -18,7 +18,7 @@ urlpatterns = [
     path("users/", include("findhelp.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    path("", include("findhelp.helpticket.urls", namespace="helpticket")),
+    path("app/", include("findhelp.helpticket.urls", namespace="helpticket")),
     path('i18n/', include('django.conf.urls.i18n')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
