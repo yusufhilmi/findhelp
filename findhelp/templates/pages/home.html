@@ -1,31 +1,32 @@
 {% extends "base.html" %}
 
-{% load i18n %}
+{% load i18n static %}
 
 
 {% block content %}
 
 
 <div class="row">
-    <div class="col m-3 p-5">
+    <div class="col mt-3 mb-3 p-5">
         <div class="text-center">
 
-            <h1 class="text-center">
+            <h1 class="text-center display-4">
                 A platform where people can find help!
             </h1>
-            <p>
-                As findhelp team we are the medium between People and Civil Organizations.
+            <p class="lead mt-3">
+                As findhelp we are the medium between People and Civil Organizations.
             </p>
         </div>
     </div>
 </div>
+
 <div class="row align-items-center">
     <div class="col-md-6 col-sm-12 align-self-center">
-        <div class="mb-2">
-
-            <div class="card text-center mx-auto" style="width: 18rem;">
+        <div class="m-4">
+            <div class="card text-center mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <img class="card-img w-50 mx-auto" src="{% static 'images/civil-org.png' %}" alt="Card image cap">
+                    <h3 class="card-title">Can you help?</h3>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -34,11 +35,11 @@
         </div>
     </div>
     <div class="col-md-6 col-sm-12 align-self-center">
-        <div class="mb-2">
-
-            <div class="card text-center mx-auto" style="width: 18rem;">
+        <div class="m-4">
+            <div class="card text-center mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <img class="card-img w-50 mx-auto" src="{% static 'images/people.png' %}" alt="Card image cap">
+                    <h3 class="card-title">Do you need help?</h3>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
