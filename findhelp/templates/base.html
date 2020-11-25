@@ -127,6 +127,33 @@
     </p>
     {% endblock content %}
 
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-4 col-md">
+          <img class="mb-2" src="{% static 'images/logo.png' %}" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">&copy; Findhelp</small>
+        </div>
+        <div class="col-4 col-md">
+          <h5>{% trans 'About' %}</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">{% trans 'About' %}</a></li>
+            <li><a class="text-muted" href="#">{% trans 'Civil Organizations' %}</a></li>
+            <li><a class="text-muted" href="#">{% trans 'People in Need' %}</a></li>
+            <li><a class="text-muted" href="#">{% trans 'Privacy Policy' %}</a></li>
+          </ul>
+        </div>
+        <div class="col-4 col-md">
+          <h5>{% trans 'Social' %}</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">{% trans 'LinkedIn' %}</a></li>
+            <li><a class="text-muted" href="#">{% trans 'Twitter' %}</a></li>
+            <li><a class="text-muted" href="#">{% trans 'GitHub' %}</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
   </div> <!-- /container -->
 
   {% block modal %}{% endblock modal %}
