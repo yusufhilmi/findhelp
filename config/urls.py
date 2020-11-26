@@ -11,7 +11,8 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="landing-home"),
     path("privacy/", TemplateView.as_view(template_name="pages/privacy.html"), name="privacy"),
     path("contact/", TemplateView.as_view(template_name="pages/contact.html"), name="contact"),
-    path("civil-organizations/", TemplateView.as_view(template_name="pages/civil-organizations.html"), name="civil-organizations"),
+    path("people/", TemplateView.as_view(template_name="pages/people.html"), name="people"),
+    path("civil-organizations/", TemplateView.as_view(template_name="pages/civil.html"), name="civil"),
     path("contact/", TemplateView.as_view(template_name="pages/contact.html"), name="contact"),
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
     # Django Admin, use {% url 'admin:index' %}
