@@ -137,8 +137,8 @@
         <div class="col-4 col-md">
           <h5>{% trans 'About' %}</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">{% trans 'Civil Organizations' %}</a></li>
-            <li><a class="text-muted" href="#">{% trans 'People' %}</a></li>
+            <li><a class="text-muted" href="{% url 'civil' %}">{% trans 'Civil Organizations' %}</a></li>
+            <li><a class="text-muted" href="{% url 'people' %}">{% trans 'People' %}</a></li>
             <li><a class="text-muted" href="{% url 'privacy' %}">{% trans 'Privacy Policy' %}</a></li>
             <li><a class="text-muted" href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
           </ul>
