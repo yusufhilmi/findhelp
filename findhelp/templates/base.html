@@ -51,7 +51,16 @@
                 class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{% url 'civil' %}">{% trans 'Civil Organizations' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'people' %}">{% trans 'Need Help?' %}</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">{% trans 'About' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">{% trans 'Contact' %}</a>
           </li>
           {% if request.user.is_authenticated %}
           <li class="nav-item">
@@ -138,7 +147,7 @@
           <h5>{% trans 'About' %}</h5>
           <ul class="list-unstyled text-small">
             <li><a class="text-muted" href="{% url 'civil' %}">{% trans 'Civil Organizations' %}</a></li>
-            <li><a class="text-muted" href="{% url 'people' %}">{% trans 'People' %}</a></li>
+            <li><a class="text-muted" href="{% url 'people' %}">{% trans 'Need Help?' %}</a></li>
             <li><a class="text-muted" href="{% url 'privacy' %}">{% trans 'Privacy Policy' %}</a></li>
             <li><a class="text-muted" href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
           </ul>
@@ -146,9 +155,9 @@
         <div class="col-4 col-md">
           <h5>{% trans 'Social' %}</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">{% trans 'LinkedIn' %}</a></li>
+            <li><a class="text-muted" href="https://www.linkedin.com/company/findhelp/">{% trans 'LinkedIn' %}</a></li>
             <li><a class="text-muted" href="#">{% trans 'Twitter' %}</a></li>
-            <li><a class="text-muted" href="#">{% trans 'GitHub' %}</a></li>
+            <li><a class="text-muted" href="https://github.com/yusufhilmi/findhelp">{% trans 'GitHub' %}</a></li>
           </ul>
         </div>
       </div>
