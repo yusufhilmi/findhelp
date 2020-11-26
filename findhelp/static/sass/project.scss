@@ -104,6 +104,9 @@ body {
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
+.contact-image {
+  max-height: 50vh;
+}
 
 // .btn-outline-findhelp {
 //   @include button-outline-variant($logo-color-old, #222222, lighten($logo-color-old,5%), $logo-color-old);
