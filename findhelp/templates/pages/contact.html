@@ -1,25 +1,84 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n static%}
 
 {% block content %}
 
 <div class="m-5">
-    <h1>{% trans 'What is Findhelp?' %}</h1>
-    <div class="mt-4">
+
+    <div class="mt-5">
+        <img src="{% static 'images/contact.png' %}" class="contact-image" alt="Contact Us image">
+        <h1>{% trans 'Contact' %}</h1>
+        <hr>
         <p>
-            <strong>{% trans 'Findhelp is a platform where people can find help.' %}</strong>
+            Our main goal is to create a platform in which people can find help. We achieve this goal by connecting
+            Civil Organizations with People. 
+            <br>
+            <br>
+            Please reach us for any thing that is/might be related to us.
         </p>
     </div>
+<br>
     <div class="mt-5">
-        <h1>{% trans 'Contact Us' %}</h1>
-        <div class="mt-4">
+        <h3>
+            Civil Organizations
+        </h3>
+        <hr>
+        <p>
+            If you represent a Civil Organization and want to build a partnership with us please send us an
+            <a href="mailto:yusufhilmicr@gmail.com" target="_blank">email</a>.
+            <br>
+            <br>
+        </p>
+    </div>
+<br>
+    <div class="mt-5">
+        <h3>
+            You need help?
+        </h3>
+        <hr>
+        <p>
+            If you need a help from Civil Organizations, please sign-up/sign-in and create a help call in the system.
+            <br>
+            <br>
+            If there is anything wrong with the site or any bug preventing you from accessing any features send us an
+            <a href="mailto:yusufhilmicr@gmail.com" target="_blank">email</a>.
+            <br>
+            <br>
+        </p>
+    </div>
 
-            <p>
-                {% blocktrans %}
-                You can contact us through <a href="mailto:yusufhilmicr@gmail.com" target="_blank">Email</a>.
-                {% endblocktrans %}
-            </p>
+    <!--             
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Send a Message
+        </div>
+        <div class="card-block">
+            <form role="form">
+                <div class="form-group col-lg-4">
+                    <label class="form-control-label" for="form-group-input">Name</label>
+                    <input type="text" class="form-control" id="form-group-input" name="name">
+                </div>
+                <div class="form-group col-lg-4">
+                    <label class="form-control-label" for="form-group-input">Email</label>
+                    <input type="text" class="form-control" id="form-group-input" name="email">
+                </div>
+                <div class="form-group col-lg-4">
+                    <label class="form-control-label" for="form-group-input">Reason</label>
+                    <select size="0" class="form-control" name="reason">
+                        <option>Sales</option>
+                        <option>Tech Support</option>
+                        <option>General Feedback</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-12">
+                    <label class="form-control-label" for="form-group-input">Notes</label>
+                    <textarea class="form-control" id="form-group-input" name="notes" rows="6"></textarea>
+                </div>
+            </form>
         </div>
     </div>
+</div>
+-->
 </div>
 {% endblock content %}
