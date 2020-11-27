@@ -8488,3 +8488,7 @@ body {
 .community-image {
   max-width: 100%;
   max-height: 50vh; }
+
+.civil-image {
+  max-width: 100%;
+  max-height: 30vh; }
