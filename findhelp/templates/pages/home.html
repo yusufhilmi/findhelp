@@ -29,7 +29,7 @@
                     <h3 class="card-title">Can you help?</h3>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="{% url 'civil' %}" class="btn btn-primary">{% trans 'Get Started' %}</a>
                 </div>
             </div>
         </div>
@@ -39,10 +39,10 @@
             <div class="card text-center mx-auto">
                 <div class="card-body">
                     <img class="card-img w-50 mx-auto" src="{% static 'images/people.png' %}" alt="Card image cap">
-                    <h3 class="card-title">Do you need help?</h3>
+                    <h3 class="card-title">Need help?</h3>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="{% url 'people' %}" class="btn btn-primary">{% trans 'Get Started' %}</a>
                 </div>
             </div>
         </div>
@@ -60,12 +60,73 @@
     <div class="col">
         <div class="mt-5">
             <h1>Our Mission</h1>
-            <hr >
+            <hr>
             <div class="mt-3">
                 <p class="lead pt-3">We are a team of volunteeers trying to connect people with civil organizations.
-                     Our main goal is to create a channel between two and inform people about how they can find help.</p>
+                    Our main goal is to create a channel between two and inform people about how they can find help.</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col center-block text-center">
+                    <h4>
+                        People
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col center-block text-center">
+                    <svg height="100%" width="100%">
+                        <line x1="50%" y1="0" x2="50%" y2="30vh" style="stroke:#6cd9ca; stroke-width:5;" />
+                    </svg>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col center-block text-center">
+                    <h4>
+                        Civil Organizations
+                    </h4>
+                </div>
             </div>
         </div>
+    </div>
+</div>
+
+
+<div class="row m-3">
+    <div class="col">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <div class="mt-5">
+            <h1>How it works?</h1>
+            <hr>
+            <div class="mt-3">
+                <p class="lead pt-3">
+                    We are working with Civil Organizations and other entities to provide help to our users.
+                    Our users represents either the person in need of help himself or a representative of that kind of
+                    person.
+
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6 center-block my-auto">
+
+            <ol class="align-middle">
+                <li>People share their help call,</li>
+                <li>Findhelp appoints one of the civil organizations to a help call,</li>
+                <li>We validate the help call with our partner,</li>
+                <li>Our partners will reach out!</li>
+            </ol>
+    </div> 
+    <div class="col-md-6 center-block text-center">
+        <img src="{% static 'images/love.png' %}" class="community-image" alt="Contact Us image">
     </div>
 </div>
 

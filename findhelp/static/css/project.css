@@ -8484,3 +8484,7 @@ body {
 
 .contact-image {
   max-height: 50vh; }
+
+.community-image {
+  max-width: 100%;
+  max-height: 50vh; }
