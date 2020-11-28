@@ -50,18 +50,6 @@
             <a class="nav-link" href="{% url 'landing-home' %}">{% trans 'Home' %}<span
                 class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'civil' %}">{% trans 'Civil Organizations' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'people' %}">{% trans 'Need Help?' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">{% trans 'About' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">{% trans 'Contact' %}</a>
-          </li>
           {% if request.user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'helpticket:home' %}">{% trans 'Helptickets' %}<span
@@ -79,7 +67,20 @@
               <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'Sign Out' %}</a>
             </div>
           </li>
-          {% else %}
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'civil' %}">{% trans 'Civil Organizations' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'people' %}">{% trans 'Need Help?' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">{% trans 'About' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">{% trans 'Contact' %}</a>
+          </li>
+          {% if not request.user.is_authenticated %}
           <li class="nav-item">
             {# URL provided by django-allauth/account/urls.py #}
             <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
