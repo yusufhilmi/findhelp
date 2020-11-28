@@ -3,22 +3,95 @@
 
 {% block content %}
 
-<div class="m-5">
 
-    <div class="mt-5">
-        <h3>
-            You need help?
-        </h3>
+
+<div class="row mt-5 align-items-end">
+    <div class="col-md-6">
+        <h1>
+            Need Help?
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
         <hr>
         <p>
-            If you need a help from Civil Organizations, please sign-up/sign-in and create a help call in the system.
-            <br>
-            <br>
-            If there is anything wrong with the site or any bug preventing you from accessing any features send us an
-            <a href="mailto:yusufhilmicr@gmail.com" target="_blank">email</a>.
+            If you are a person in need of help, you can 
+            <a id="sign-up-link" href="{% url 'account_signup' %}"> sign up</a> 
+            to directly
+            create a help call in our system. After your call we will connect you with civil organizations.
+            <br><br>
+            Our main objective is to bring people and civil organizations together. We have started our journey to
+            inform society
+            about Civil Organizations and created this platform to become the bridge between people and civil
+            organizations.
             <br>
             <br>
         </p>
+        <p class="lead text-center">
+            <b>
+                We will do everything to help you!
+            </b>
+            <br>
+        </p>
+        <div class="row align-items-center">
+            <div class="col-lg-12 align-self-center">
+                <div class="text-center mx-auto">
+
+                    <img src="{% static 'images/we-will-help.png' %}" class="we-will-help-image" alt="We will help!">
+                </div>
+            </div>
+        </div>
+
+        <hr class="w-25">
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col">
+        <h2>
+            How to find help?
+        </h2>
+        <hr>
+        <p>
+            You are able to create help calls on the system. Whilst creating it, you will provide us a brief
+            description of your situation, your contact information and the relevant category for your situation.
+            <br>
+            <b>Categories</b> are decided by our team considering our partnerships and our potential effect on that
+            category.
+            <br><br>
+            After help calls we will reach out to you and we will make sure you find help.
+            <br><br>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col">
+        <h4>
+            Help Call Rules
+        </h4>
+        <ol class="mt-3">
+            <li>Be honest with your situation</li>
+            <li>You have to be able to provide an evidence of your situation</li>
+            <li>If we detect fraud, your account immediately will be banned</li>
+            <li>Be kind to our volunteers and our partners</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col text-center">
+        <hr class="w-25">
+        <p class="lead">
+            If you need help 
+            <a id="sign-up-link" href="{% url 'account_signup' %}"> sign up</a> 
+            to find a help!
+            <br>
+        </p>
+        <hr class="w-25">
+
     </div>
 </div>
 {% endblock content %}
