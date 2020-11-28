@@ -145,6 +145,29 @@
         <img src="{% static 'images/love.png' %}" class="community-image" alt="Contact Us image">
     </div>
 </div>
-
-
+{% get_current_language as LANGUAGE_CODE %}
+{% if LANGUAGE_CODE == "tr" %}
+<div class="row mt-4">
+    <div class="col">
+        <h2>
+            Neden  İngilizce desteğimiz var?
+        </h2>
+        <hr>
+        <p>
+            Findhelp her ne kadar Türkiye'de yaşadığımız sorunları çözebilmek amacıyla oluşturduğumuz bir platform olsa da 
+            Dünya Genelinde STK'lar ve toplum arasında bir kopukluk olduğunu fark ettik.
+            <br><br>
+           Bu kopukluğa sadece Türkiye'de değil aynı zamanda Dünya'da da bir çözüm bulabilmek için tüm platformu açık kaynak kodlu olarak geliştirdik. 
+           Bununla beraber sistemimizi herhangi farklı bir ülkede hayat'a geçirmek isteyen gruplara ve kişilere tam desteğimizi sunuyoruz.
+            <br><br>
+            Planımız Türkiye'den başlayarak dünya genelinde pozitif yönde bir ilerlemeye yol açmak. 
+            Platformumuzun açık kaynak koduna 
+            <a href="https://github.com/yusufhilmi/findhelp">bu linkten</a>
+            ulaşabilirsiniz. Hem Türkiyedeki hem de Dünya genelindeki geliştiricileri platformu geliştirmeye ve
+             vizyonumuzu paylaşmaya davet ediyoruz.  
+            <br><br>
+        </p>
+    </div>
+</div>
+{% endif %}
 {% endblock content %}
