@@ -50,9 +50,26 @@
             <a class="nav-link" href="{% url 'landing-home' %}">{% trans 'Home' %}<span
                 class="sr-only">(current)</span></a>
           </li>
-          {% if request.user.is_authenticated %}
+          
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'helpticket:home' %}">{% trans 'Helptickets' %}<span
+            <a class="nav-link" href="{% url 'civil' %}">{% trans 'Civil Organizations' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'people' %}">{% trans 'Need Help?' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">{% trans 'About' %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">{% trans 'Contact' %}</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav mr-auto">
+        {% if request.user.is_authenticated %}
+        
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'helpticket:home' %}"><b>{% trans 'Helptickets' %}</b><span
                 class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
@@ -67,19 +84,8 @@
               <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'Sign Out' %}</a>
             </div>
           </li>
+        
           {% endif %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'civil' %}">{% trans 'Civil Organizations' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'people' %}">{% trans 'Need Help?' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">{% trans 'About' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">{% trans 'Contact' %}</a>
-          </li>
           {% if not request.user.is_authenticated %}
           <li class="nav-item">
             {# URL provided by django-allauth/account/urls.py #}
@@ -91,8 +97,6 @@
           </li>
           {% endif %}
         </ul>
-
-
         <a class="mr-5">
           <form action="{% url 'set_language' %}" method="post" id="languageform">
             {% csrf_token %}

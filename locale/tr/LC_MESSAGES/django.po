@@ -20,7 +20,7 @@ msgstr ""
 
 #: findhelp/helpticket/apps.py:7
 msgid "Tickets"
-msgstr "Yardım Biletleri"
+msgstr "Yardım Çağrıları"
 
 #: findhelp/helpticket/models.py:15
 #: findhelp/templates/helpticket/tickets.html:18
@@ -212,7 +212,7 @@ msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
-"Şifrenizi mi unuttunuz? E-mail adresinizi girin ve sizeşifrenizi yenilemeniz "
+"Şifrenizi mi unuttunuz? E-mail adresinizi girin ve size şifrenizi yenilemeniz "
 "için yapmanı gerekenleri gösterelim."
 
 #: findhelp/templates/account/password_reset.html:21
@@ -337,17 +337,15 @@ msgstr "Anasayfa"
 
 #: findhelp/templates/base.html:55
 msgid "Helptickets"
-msgstr "Yardım Biletleri"
+msgstr "Yardım Çağrıları"
 
 #: findhelp/templates/base.html:61
 msgid "Profile"
 msgstr "Hesabım"
 
 #: findhelp/templates/base.html:64
-#, fuzzy
-#| msgid "Helptickets"
 msgid "Edit Helptickets"
-msgstr "Yardım Biletleri"
+msgstr "Yardım Çağrılarını Düzenle"
 
 #: findhelp/templates/base.html:65
 msgid "Update Profile"
@@ -356,13 +354,11 @@ msgstr "Güncelle"
 #: findhelp/templates/base.html:72 findhelp/templates/base.html:150
 #: findhelp/templates/pages/civil.html:10
 msgid "Civil Organizations"
-msgstr ""
+msgstr "STK"
 
 #: findhelp/templates/base.html:75 findhelp/templates/base.html:151
-#, fuzzy
-#| msgid "Find Help"
 msgid "Need Help?"
-msgstr "Yardım Bul"
+msgstr "Yardım İhtiyacı"
 
 #: findhelp/templates/base.html:78 findhelp/templates/base.html:148
 msgid "About"
@@ -405,7 +401,7 @@ msgstr "Sil"
 
 #: findhelp/templates/helpticket/profile.html:11
 msgid "Helptickets Below!"
-msgstr "Yardım Biletleriniz"
+msgstr "Yardım Çağrılarınız:"
 
 #: findhelp/templates/helpticket/profile.html:19
 #: findhelp/templates/helpticket/tickets.html:36
@@ -430,11 +426,11 @@ msgstr "Güncelle"
 
 #: findhelp/templates/helpticket/tickets.html:10
 msgid "Latest Helptickets"
-msgstr "Yardım biletleri"
+msgstr "Yardım Çağrıları"
 
 #: findhelp/templates/helpticket/tickets.html:89
 msgid "There aren't unresolved tickets in last 90 days."
-msgstr "Son 90 gün içerisinde çözülememiş bir yardım bileti mevcut değildir."
+msgstr "Son 90 gün içerisinde çözülememiş bir yardım çağrısı mevcut değildir."
 
 #: findhelp/templates/pages/about.html:7
 msgid "What is Findhelp?"
@@ -449,26 +445,6 @@ msgid "Our Story"
 msgstr "Hikayemiz"
 
 #: findhelp/templates/pages/about.html:19
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                There is an increasing number of problems in our society. "
-#| "Almost all forms of violence still exists and\n"
-#| "                number of occasion is increasing day by day. People can't "
-#| "find food or shelter; they lose their job\n"
-#| "                without\n"
-#| "                getting their payments. These are only a few of the "
-#| "problems. To respond and fix these problems we use\n"
-#| "                social media channels and it is a useful medium to help. "
-#| "However, only a small percentage of posts are\n"
-#| "                getting traction and the rest of problems that are shared "
-#| "are being lost in hundreds of thousands posts.\n"
-#| "                There is also the fact that a help request in social "
-#| "media is useful only if the people or organizations\n"
-#| "                that can help can see them. So, we created this platform "
-#| "to reach help requests of people to the\n"
-#| "                organizations that can help.\n"
-#| "                "
 msgid ""
 "\n"
 "                There is an increasing number of problems in our society. "
@@ -547,6 +523,21 @@ msgid ""
 "            or want to learn how our partnership works please keep reading.\n"
 "            "
 msgstr ""
+"\n"
+"            Findhelp olarak asıl amacımız STK'lar ile insanları bir araya getirebilmektir. "
+" Yolculuğumuza \n"
+"            toplumu STK'lar hakkında bilgilendirmek ve \n"
+"            STK'larla insanlar arasında bir köprü görevi görmek için başladık "
+" \n"
+"\n"
+"\n"
+"            <br>\n"
+"            <br>\n"
+"            Bu amaca ulaşabilmek için STK'lar ile aktif bir şekilde partnerlikler oluşturuyoruz. "
+"Eğer bizimle çalışmak isteyen bir STK'yı temsil ediyorsanız  a\n"
+"     veya \n"
+"            partnerlik sistemimizin nasıl işlediğini merak ediyorsanız, okumaya devam edin.\n"
+"            "
 
 #: findhelp/templates/pages/civil.html:35
 msgid ""
@@ -554,10 +545,13 @@ msgid ""
 "                Become a partner to help people!\n"
 "                "
 msgstr ""
+"\n"
+"                İnsanlara yardım edebilmek için partnerimiz olun!\n"
+"                "
 
 #: findhelp/templates/pages/civil.html:57
 msgid "How our platform works?"
-msgstr ""
+msgstr "Platform nasıl çalışıyor?"
 
 #: findhelp/templates/pages/civil.html:61
 msgid ""
@@ -678,7 +672,7 @@ msgstr "E-Mail"
 
 #: findhelp/templates/users/user_detail.html:26
 msgid "My Helptickets"
-msgstr "Yardım Biletlerim"
+msgstr "Yardım Çağrılarım"
 
 #: findhelp/users/apps.py:7
 msgid "Users"
