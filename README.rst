@@ -77,6 +77,18 @@ Bootstrap's javascript as well as its dependencies is concatenated into a single
 .. _Bootstrap docs: https://getbootstrap.com/docs/4.1/getting-started/theming/
 
 
+Deployment
+^^^^^^^^^^^^^^^^^^^
+Deployment commands (without migrations) ::
+
+  $ docker-compose -f production.yml down
+  $ git pull
+  $ docker-compose -f production.yml build
+  $ docker-compose -f production.yml up
+
+You don't need to run `compilemessages` command, it is included in `/compose/production/django/start`
+
+
 PRODUCTION SETTINGS
 ^^^^^^^^^^^^^^^^^^^
 
