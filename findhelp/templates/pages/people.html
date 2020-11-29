@@ -8,7 +8,7 @@
 <div class="row mt-5 align-items-end">
     <div class="col-md-6">
         <h1>
-            Need Help?
+            {% trans 'Need Help?' %}
         </h1>
     </div>
 </div>
@@ -17,8 +17,9 @@
     <div class="col">
         <hr>
         <p>
-            If you are a person in need of help, you can 
-            <a id="sign-up-link" href="{% url 'account_signup' %}"> sign up</a> 
+            {% blocktrans %}
+            If you are a person in need of help, you can
+            sign-up
             to directly
             create a help call in our system. After your call we will connect you with civil organizations.
             <br><br>
@@ -26,12 +27,14 @@
             inform society
             about Civil Organizations and created this platform to become the bridge between people and civil
             organizations.
+            {% endblocktrans %}
+
             <br>
             <br>
         </p>
         <p class="lead text-center">
             <b>
-                We will do everything to help you!
+                {% trans 'We will do everything to help you!' %}
             </b>
             <br>
         </p>
@@ -51,10 +54,11 @@
 <div class="row mt-4">
     <div class="col">
         <h2>
-            How to find help?
+            {% trans 'How to find help?' %}
         </h2>
         <hr>
         <p>
+            {% blocktrans %}
             You are able to create help calls on the system. Whilst creating it, you will provide us a brief
             description of your situation, your contact information and the relevant category for your situation.
             <br>
@@ -62,6 +66,8 @@
             category.
             <br><br>
             After help calls we will reach out to you and we will make sure you find help.
+            {% endblocktrans %}
+
             <br><br>
         </p>
     </div>
@@ -70,13 +76,16 @@
 <div class="row mt-4">
     <div class="col">
         <h4>
-            Help Call Rules
+            {% trans 'Help Call Rules' %}
         </h4>
         <ol class="mt-3">
+            {% blocktrans %}
             <li>Be honest with your situation</li>
             <li>You have to be able to provide an evidence of your situation</li>
             <li>If we detect fraud, your account immediately will be banned</li>
             <li>Be kind to our volunteers and our partners</li>
+            {% endblocktrans %}
+
         </ol>
     </div>
 </div>
@@ -85,9 +94,12 @@
     <div class="col text-center">
         <hr class="w-25">
         <p class="lead">
-            If you need help 
-            <a id="sign-up-link" href="{% url 'account_signup' %}"> sign up</a> 
+            {% blocktrans %}
+            If you need help
+            sign-up
             to find help!
+            {% endblocktrans %}
+
             <br>
         </p>
         <hr class="w-25">
