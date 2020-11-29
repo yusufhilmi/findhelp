@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-28 19:29+0000\n"
+"POT-Creation-Date: 2020-11-29 10:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,8 +35,8 @@ msgstr "Şehir"
 msgid "Description"
 msgstr "Lütfen durumunuzu anlatınız"
 
-#: findhelp/helpticket/models.py:19 findhelp/templates/base.html:81
-#: findhelp/templates/base.html:153 findhelp/templates/pages/contact.html:10
+#: findhelp/helpticket/models.py:19 findhelp/templates/base.html:64
+#: findhelp/templates/base.html:157 findhelp/templates/pages/contact.html:10
 msgid "Contact"
 msgstr "İletişim"
 
@@ -150,7 +150,7 @@ msgstr ""
 
 #: findhelp/templates/account/login.html:7
 #: findhelp/templates/account/login.html:11
-#: findhelp/templates/account/login.html:44 findhelp/templates/base.html:90
+#: findhelp/templates/account/login.html:44 findhelp/templates/base.html:96
 msgid "Sign In"
 msgstr "Giriş Yap"
 
@@ -182,7 +182,7 @@ msgstr "Şifrenizi mi unuttunuz?"
 
 #: findhelp/templates/account/logout.html:5
 #: findhelp/templates/account/logout.html:8
-#: findhelp/templates/account/logout.html:17 findhelp/templates/base.html:67
+#: findhelp/templates/account/logout.html:17 findhelp/templates/base.html:84
 msgid "Sign Out"
 msgstr "Çıkış Yap"
 
@@ -212,8 +212,8 @@ msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
-"Şifrenizi mi unuttunuz? E-mail adresinizi girin ve size şifrenizi yenilemeniz "
-"için yapmanı gerekenleri gösterelim."
+"Şifrenizi mi unuttunuz? E-mail adresinizi girin ve size şifrenizi "
+"yenilemeniz için yapmanı gerekenleri gösterelim."
 
 #: findhelp/templates/account/password_reset.html:21
 msgid "Reset My Password"
@@ -266,7 +266,7 @@ msgid "Signup"
 msgstr "Kayıt Ol"
 
 #: findhelp/templates/account/signup.html:9
-#: findhelp/templates/account/signup.html:19 findhelp/templates/base.html:86
+#: findhelp/templates/account/signup.html:19 findhelp/templates/base.html:92
 msgid "Sign Up"
 msgstr "Kayıt Ol"
 
@@ -335,58 +335,63 @@ msgstr ""
 msgid "Home"
 msgstr "Anasayfa"
 
-#: findhelp/templates/base.html:55
-msgid "Helptickets"
-msgstr "Yardım Çağrıları"
-
-#: findhelp/templates/base.html:61
-msgid "Profile"
-msgstr "Hesabım"
-
-#: findhelp/templates/base.html:64
-msgid "Edit Helptickets"
-msgstr "Yardım Çağrılarını Düzenle"
-
-#: findhelp/templates/base.html:65
-msgid "Update Profile"
-msgstr "Güncelle"
-
-#: findhelp/templates/base.html:72 findhelp/templates/base.html:150
+#: findhelp/templates/base.html:55 findhelp/templates/base.html:154
 #: findhelp/templates/pages/civil.html:10
+#: findhelp/templates/pages/contact.html:26
+#: findhelp/templates/pages/home.html:116
 msgid "Civil Organizations"
 msgstr "STK"
 
-#: findhelp/templates/base.html:75 findhelp/templates/base.html:151
+#: findhelp/templates/base.html:58 findhelp/templates/base.html:155
+#: findhelp/templates/pages/contact.html:41
+#: findhelp/templates/pages/home.html:49
+#: findhelp/templates/pages/people.html:11
 msgid "Need Help?"
 msgstr "Yardım İhtiyacı"
 
-#: findhelp/templates/base.html:78 findhelp/templates/base.html:148
+#: findhelp/templates/base.html:61 findhelp/templates/base.html:152
 msgid "About"
 msgstr "Hakkımızda"
 
-#: findhelp/templates/base.html:118
+#: findhelp/templates/base.html:72
+msgid "Helptickets"
+msgstr "Yardım Çağrıları"
+
+#: findhelp/templates/base.html:78
+msgid "Profile"
+msgstr "Hesabım"
+
+#: findhelp/templates/base.html:81
+msgid "Edit Helptickets"
+msgstr "Yardım Çağrılarını Düzenle"
+
+#: findhelp/templates/base.html:82
+msgid "Update Profile"
+msgstr "Güncelle"
+
+#: findhelp/templates/base.html:122
 #: findhelp/templates/helpticket/create_ticket.html:12
 #: findhelp/templates/helpticket/helpticket_form.html:12
 msgid "Find Help"
 msgstr "Yardım Bul"
 
-#: findhelp/templates/base.html:152
+#: findhelp/templates/base.html:156
 msgid "Privacy Policy"
 msgstr "Gizlilik Politikası"
 
-#: findhelp/templates/base.html:157
+#: findhelp/templates/base.html:161
 msgid "Social"
 msgstr "Sosyal"
 
-#: findhelp/templates/base.html:159
+#: findhelp/templates/base.html:163
 msgid "LinkedIn"
 msgstr ""
 
-#: findhelp/templates/base.html:160
+#: findhelp/templates/base.html:164
 msgid "Twitter"
 msgstr ""
 
-#: findhelp/templates/base.html:161
+#: findhelp/templates/base.html:165
 msgid "GitHub"
 msgstr ""
 
@@ -524,19 +529,21 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            Findhelp olarak asıl amacımız STK'lar ile insanları bir araya getirebilmektir. "
-" Yolculuğumuza \n"
+"            Findhelp olarak asıl amacımız STK'lar ile insanları bir araya "
+"getirebilmektir.  Yolculuğumuza \n"
 "            toplumu STK'lar hakkında bilgilendirmek ve \n"
-"            STK'larla insanlar arasında bir köprü görevi görmek için başladık "
-" \n"
+"            STK'larla insanlar arasında bir köprü görevi görmek için "
+"başladık  \n"
 "\n"
 "\n"
 "            <br>\n"
 "            <br>\n"
-"            Bu amaca ulaşabilmek için STK'lar ile aktif bir şekilde partnerlikler oluşturuyoruz. "
-"Eğer bizimle çalışmak isteyen bir STK'yı temsil ediyorsanız  a\n"
+"            Bu amaca ulaşabilmek için STK'lar ile aktif bir şekilde "
+"partnerlikler oluşturuyoruz. Eğer bizimle çalışmak isteyen bir STK'yı temsil "
+"ediyorsanız  a\n"
 "     veya \n"
-"            partnerlik sistemimizin nasıl işlediğini merak ediyorsanız, okumaya devam edin.\n"
+"            partnerlik sistemimizin nasıl işlediğini merak ediyorsanız, "
+"okumaya devam edin.\n"
 "            "
 
 #: findhelp/templates/pages/civil.html:35
@@ -578,22 +585,23 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            Kullanıcılarımız sistemimizi kullanarak yardım çağrısı oluşturabilirler . Oluştururken "
-"bizlere\n"
+"            Kullanıcılarımız sistemimizi kullanarak yardım çağrısı "
+"oluşturabilirler . Oluştururken bizlere\n"
 "            içinde bulundukları durumun özetini, iletişim bilgilerini ve "
 "kendileri ile alakalı olan bir kategoriyi belirtirler.\n"
 "            <br>\n"
-"            <b>Kategoriler</b> takımımız tarafından aktif "
-"partnerliklerimizi ve o alandaki potansiyel etkimiz değerlendirildikten sonra belirlenir.\n"
+"            <b>Kategoriler</b> takımımız tarafından aktif partnerliklerimizi "
+"ve o alandaki potansiyel etkimiz değerlendirildikten sonra belirlenir.\n"
 "\n"
 "            <br><br>\n"
-"            Yardım çağrısı oluşturulduktan sonra ilgili çağrı sahibini, yardım edebilecek partnerimizle  "
-" iletişime geçiriyoruz.\n"
+"            Yardım çağrısı oluşturulduktan sonra ilgili çağrı sahibini, "
+"yardım edebilecek partnerimizle   iletişime geçiriyoruz.\n"
 "            <br><br>\n"
 "            Süreci daha verimli yapabilmek için Yapay Dil İşleme\n"
 "       (NLP)     ile\n"
-"          anında ilgili kullanıcımızın bilgilerini analiz ederek o anda en uygun olan partnerimize iletip    "
-"tam otomatik bir sistem oluşturmak için çalışıyoruz.\n"
+"          anında ilgili kullanıcımızın bilgilerini analiz ederek o anda en "
+"uygun olan partnerimize iletip    tam otomatik bir sistem oluşturmak için "
+"çalışıyoruz.\n"
 "\n"
 "            <br><br>\n"
 "            "
@@ -615,12 +623,11 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            Partnerlikler operasyonumuzun en temel yapı taşıdır. Daha "
-"önce de belirttiğimiz fibi bu partnerlikler çoğunlukla STK'lardan oluşmaktadır.\n"
-"            STK'lar ile olan partnerliğimiz en önemli partnerliklerdir. Eğer bizimle çalışmak isteyen bir STK'yı temsil ediyorsanız, "
-"lütfen aşağıdaki listeyi inceleyin!\n"
-""
-""
+"            Partnerlikler operasyonumuzun en temel yapı taşıdır. Daha önce "
+"de belirttiğimiz fibi bu partnerlikler çoğunlukla STK'lardan oluşmaktadır.\n"
+"            STK'lar ile olan partnerliğimiz en önemli partnerliklerdir. Eğer "
+"bizimle çalışmak isteyen bir STK'yı temsil ediyorsanız, lütfen aşağıdaki "
+"listeyi inceleyin!\n"
 "            <br><br>\n"
 "            "
 
@@ -649,9 +656,10 @@ msgstr ""
 "            "
 
 #: findhelp/templates/pages/civil.html:118
+#: findhelp/templates/pages/contact.html:30
 msgid ""
 "\n"
-"            If you want to be a partner please reach us through \n"
+"            If you want to be a partner please reach us through\n"
 "            <a href=\"mailto:yusufhilmicr@gmail.com\" target=\"_blank"
 "\">email</a>.\n"
 "            "
@@ -662,9 +670,276 @@ msgstr ""
 "\">email</a> atınız.\n"
 "            "
 
-#: findhelp/templates/pages/home.html:33 findhelp/templates/pages/home.html:47
+#: findhelp/templates/pages/contact.html:13
+msgid ""
+"\n"
+"            Our main goal is to create a platform in which people can find "
+"help. We achieve this goal by connecting\n"
+"            Civil Organizations with People.\n"
+"            <br>\n"
+"            <br>\n"
+"            Please reach us for any thing that is/might be related to us.\n"
+"            "
+msgstr ""
+"\n"
+"           Findhelp olarak amacımız insanların yardım bulabileceği "
+"bir platform yaratmaktır. Bu amacımıza\n"
+"            STK'lar ile toplumu bir araya getirerek hizmet ediyoruz.\n"
+"            <br>\n"
+"            <br>\n"
+"            Lütfen bizimle alakalı olabileceğini düşündüğünüz her şey için iletişime geçin.\n"
+"            "
+
+#: findhelp/templates/pages/contact.html:45
+msgid ""
+"\n"
+"            If you need a help from Civil Organizations, please sign-up/sign-"
+"in and create a help call in the system.\n"
+"            <br>\n"
+"            <br>\n"
+"            If there is anything wrong with the site or any bug preventing "
+"you from accessing any features send us an\n"
+"            <a href=\"mailto:yusufhilmicr@gmail.com\" target=\"_blank"
+"\">email</a>.\n"
+"            "
+msgstr ""
+"\n"
+"            Eğer yardıma ihtiyacınız varsa lütfen sitemizden kayıt olarak"
+" sistemimizde bir yardım çağırısı oluşturun.\n"
+"            <br>\n"
+"            <br>\n"
+"            Eğer sitemizle alakalı herhangi bir problem varsa veya yardım çağrınızı "
+" oluştururken bir hata ile karşılaşırsanız\n"
+"      bize      <a href=\"mailto:yusufhilmicr@gmail.com\" target=\"_blank"
+"\">email</a> ile ulaşabilirsiniz.\n"
+"            "
+
+
+#: findhelp/templates/pages/home.html:14
+msgid "A platform where people can find help!"
+msgstr "İnsanların yardım bulabileceği bir platform!"
+
+#: findhelp/templates/pages/home.html:17
+msgid ""
+"\n"
+"                As findhelp we are the medium between People and Civil "
+"Organizations.\n"
+"                "
+msgstr ""
+"\n"
+"                Findhelp olarak STK'lar ile Toplum arasında bir köprü görevi "
+"görüyoruz.\n"
+"                "
+
+#: findhelp/templates/pages/home.html:32
+msgid "Can you help?"
+msgstr "Yardım Et"
+
+#: findhelp/templates/pages/home.html:34
+msgid ""
+"\n"
+"                        If you are interested on helping others, follow our "
+"guideline to see how you can contribute!\n"
+"                        "
+msgstr ""
+"\n"
+"                        Eğer topluma ve insanlara yardım etmeyi seviyorsanız, "
+"sizin için hazırladığımız genel bilgileri inceleyin!\n"
+"                        "
+
+#: findhelp/templates/pages/home.html:39 findhelp/templates/pages/home.html:58
 msgid "Get Started"
 msgstr "İncele"
+
+#: findhelp/templates/pages/home.html:51
+msgid ""
+"\n"
+"\n"
+"                        If you need some kind of help or you feel that you "
+"are in trouble, follow our guideline to see\n"
+"                        how you can find help!\n"
+"                        "
+msgstr ""
+"\n"
+"\n"
+"                        Eğer herhangi bir yardıma ihtiyacınız varsa veya "
+" ciddi bir sorunla karşı karşıya olduğunuzu düşünüyorsanız,\n"
+" lütfen tıklayınız!\n"
+" "
+
+#: findhelp/templates/pages/home.html:75
+msgid "Our Mission"
+msgstr "Amacımız"
+
+#: findhelp/templates/pages/home.html:79
+msgid ""
+"\n"
+"                    We are a team of volunteeers trying to connect people "
+"with civil organizations.\n"
+"                    Our main goal is to create a channel between them.\n"
+"                    "
+msgstr ""
+"\n"
+" "
+"\n"
+"                    Amacımız STK'lar ile Toplum arasında bir köprü olmaktır.\n"
+"                    "
+
+#: findhelp/templates/pages/home.html:88
+msgid "People"
+msgstr "Toplum"
+
+#: findhelp/templates/pages/home.html:134
+msgid "How it works?"
+msgstr "Platform nasıl çalışıyor?"
+
+#: findhelp/templates/pages/home.html:138
+msgid ""
+"\n"
+"\n"
+"                    We are working with Civil Organizations and other "
+"entities to provide help to our users.\n"
+"                    Our users represents either the person in need of help "
+"himself or a representative of that kind of\n"
+"                    person.\n"
+"                    "
+msgstr ""
+"\n"
+"\n"
+"                    Findhelp olarak, STK'lar ve toplumsal fayda sağlayabilecek herhangi bir kurum "
+"ile kullanıcılarımızı bir araya getiriyoruz.\n"
+"                    Kullanıcılarımız yardım ihtiyacı olan bireyleri  "
+" veya onları temsil edenlerden oluşuyor.\n"
+"\n"
+" "
+
+#: findhelp/templates/pages/home.html:157
+msgid ""
+"\n"
+"            <li>People share their help call,</li>\n"
+"            <li>Findhelp appoints one of the civil organizations to a help "
+"call,</li>\n"
+"            <li>We validate the help call with our partner,</li>\n"
+"            <li>Our partners will reach out!</li>\n"
+"            "
+msgstr ""
+"\n"
+"            <li>Kullanıcılar yardım çağrısı oluşturur,</li>\n"
+"            <li>Partnerlerimizden birini bu çağrıya yönlendiririz"
+",</li>\n"
+"            <li>Yardım çağrısının gerçekliğini partnerimizle birlikte doğrularız,</li>\n"
+"            <li>Partnerlerimiz sizlere ulaşır!</li>\n"
+"            "
+
+#: findhelp/templates/pages/people.html:20
+msgid ""
+"\n"
+"            If you are a person in need of help, you can\n"
+"            sign-up\n"
+"            to directly\n"
+"            create a help call in our system. After your call we will "
+"connect you with civil organizations.\n"
+"            <br><br>\n"
+"            Our main objective is to bring people and civil organizations "
+"together. We have started our journey to\n"
+"            inform society\n"
+"            about Civil Organizations and created this platform to become "
+"the bridge between people and civil\n"
+"            organizations.\n"
+"            "
+msgstr ""
+"\n"
+"            Eğer yardıma ihtiyacınız varsa kayıt olarak platformumuzdan yardım çağrısı oluşturabilirsiniz\n"
+" \n"
+" \n"
+" Yardım çağrınızdan sonra, partnerimiz olan kurumlardan birisi ile birlikte sizinle iletişime geçeceğiz."
+" \n"
+"            <br><br>\n"
+"            Amacımız toplumumuzu STK'lar ile daha efektif bir şekilde bir araya getirmektir. "
+" Yolculuğumuza toplumumuzu  STK'lar hakkında bilgilendirmek ve aradaki köprü olarak işlev verebilmek için başladık. \n"
+"  \n"
+"  "
+" \n"
+" \n"
+" "
+
+#: findhelp/templates/pages/people.html:37
+msgid "We will do everything to help you!"
+msgstr "Size yardım edebilmek için elimizden geleni yapacağız!"
+
+#: findhelp/templates/pages/people.html:57
+msgid "How to find help?"
+msgstr "Nasıl yardım bulabilirim?"
+
+#: findhelp/templates/pages/people.html:61
+msgid ""
+"\n"
+"            You are able to create help calls on the system. Whilst creating "
+"it, you will provide us a brief\n"
+"            description of your situation, your contact information and the "
+"relevant category for your situation.\n"
+"            <br>\n"
+"            <b>Categories</b> are decided by our team considering our "
+"partnerships and our potential effect on that\n"
+"            category.\n"
+"            <br><br>\n"
+"            After help calls we will reach out to you and we will make sure "
+"you find help.\n"
+"            "
+msgstr ""
+"\n"
+"            Sistemimizi kullanarak yardım çağrısı "
+"oluşturabilirsiniz . Oluştururken bizlere\n"
+"            içinde bulunduğunuz durumun özetini, iletişim bilgilerinizi ve "
+"sizinle alakalı olan bir kategoriyi belirtin.\n"
+"            <br>\n"
+"            <b>Kategoriler</b> takımımız tarafından aktif partnerliklerimizi "
+"ve o alandaki potansiyel etkimiz değerlendirildikten sonra belirlenir.\n"
+"\n"
+"            <br><br>\n"
+"            Yardım Çağrısı oluşturulduktan sonra size ulaşıp, gerekli desteği "
+"bulduğunuzdan emin olacağız.\n"
+" "
+
+
+#: findhelp/templates/pages/people.html:79
+msgid "Help Call Rules"
+msgstr "Yardım Çağrısı Kuralları"
+
+#: findhelp/templates/pages/people.html:82
+msgid ""
+"\n"
+"            <li>Be honest with your situation</li>\n"
+"            <li>You have to be able to provide an evidence of your "
+"situation</li>\n"
+"            <li>If we detect fraud, your account immediately will be banned</"
+"li>\n"
+"            <li>Be kind to our volunteers and our partners</li>\n"
+"            "
+msgstr ""
+"\n"
+"            <li>Durumunuzla alakalı dürüst olun</li>\n"
+"            <li>Durumunuzu kanıtlayacak materyallere  "
+"sahip olun</li>\n"
+"            <li>Eğer sahte bir yardım çağrısı oluşturursanız hesabınız anında kapatılacaktır</"
+"li>\n"
+"            <li>Gönüllülerimize ve Partnerlerimize karşı kibar</li>\n"
+"            "
+
+#: findhelp/templates/pages/people.html:97
+msgid ""
+"\n"
+"            If you need help\n"
+"            sign-up\n"
+"            to find help!\n"
+"            "
+msgstr ""
+"\n"
+"            Yardıma ihtiyacınız varsa\n"
+"            kayıt olarak\n"
+"            yardım çağrısı oluşturun!\n"
+"            "
+
 
 #: findhelp/templates/users/user_detail.html:25
 msgid "E-Mail"
