@@ -10,22 +10,27 @@
         <h1>{% trans 'Contact' %}</h1>
         <hr>
         <p>
+            {% blocktrans %}
             Our main goal is to create a platform in which people can find help. We achieve this goal by connecting
-            Civil Organizations with People. 
+            Civil Organizations with People.
             <br>
             <br>
             Please reach us for any thing that is/might be related to us.
+            {% endblocktrans %}
+
         </p>
     </div>
 
     <div class="mt-5">
         <h3>
-            Civil Organizations
+            {% trans 'Civil Organizations' %}
         </h3>
         <hr>
         <p>
-            If you represent a Civil Organization and want to build a partnership with us please send us an
+            {% blocktrans %}
+            If you want to be a partner please reach us through
             <a href="mailto:yusufhilmicr@gmail.com" target="_blank">email</a>.
+            {% endblocktrans %}
             <br>
             <br>
         </p>
@@ -33,15 +38,17 @@
 
     <div class="mt-5">
         <h3>
-            Need help?
+            {% trans 'Need Help?' %}
         </h3>
         <hr>
         <p>
+            {% blocktrans %}
             If you need a help from Civil Organizations, please sign-up/sign-in and create a help call in the system.
             <br>
             <br>
             If there is anything wrong with the site or any bug preventing you from accessing any features send us an
             <a href="mailto:yusufhilmicr@gmail.com" target="_blank">email</a>.
+            {% endblocktrans %}
             <br>
             <br>
         </p>
