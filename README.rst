@@ -93,3 +93,7 @@ PRODUCTION SETTINGS
 ^^^^^^^^^^^^^^^^^^^
 
 to-do
+
+
+TECH-STACK
+^^^^^^^^^^^^^^^^
